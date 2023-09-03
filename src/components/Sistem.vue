@@ -10,17 +10,17 @@ export default {
 };
 </script>
 
+<style>
+.sistema {
+  background-image: url("@/assets/tour16.jpg");
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+</style>
+
 <template>
-  <div
-    id="Sistema"
-    class="w-full bg-azul-900 bg-opacity-60 sistema"
-    style="
-      background-image: url('./../assets/tour16.jpg');
-      background-position: center center;
-      background-blend-mode: multiply;
-      background-size: cover;
-    "
-  >
+  <div id="Sistema" class="w-full bg-azul-900 bg-opacity-60 sistema" style="">
     <div
       class="container text-gray-200 flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10"
     >

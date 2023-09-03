@@ -1,15 +1,26 @@
 <template>
-  <footer class="bg-gray-900">
+  <footer>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="-mb-0.5 w-full"
+      viewBox="0 0 1367.743 181.155"
+    >
+      <path
+        class="fill-current text-azul-500"
+        id="wave"
+        data-name="wave"
+        d="M0,0S166.91-56.211,405.877-49.5,715.838,14.48,955.869,26.854,1366,0,1366,0V115H0Z"
+        transform="translate(1.743 66.155)"
+      ></path>
+    </svg>
     <div
-      class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
+      class="bg-gradient-to-b from-azul-500 to-gray-900 mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
     >
       <div class="lg:flex lg:items-end lg:justify-between">
         <div>
-          <div class="flex justify-center text-azul-500 lg:justify-start">
-           SITT
+          <div class="flex justify-center text-gray-200 lg:justify-start">
+            SITT
           </div>
-
-       
         </div>
 
         <ul
@@ -84,15 +95,13 @@
               </svg>
             </a>
           </li>
-
-
         </ul>
       </div>
 
       <div class="mt-8 border-t border-gray-100 pt-8">
         <div class="sm:flex sm:justify-between">
           <p class="text-xs text-gray-200">
-            &copy; 202. SITT. Reservados todos los derechos.
+            &copy; 2023 SITT. Reservados todos los derechos.
           </p>
 
           <ul

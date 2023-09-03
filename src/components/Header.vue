@@ -102,7 +102,7 @@
         </button>
         <div
           v-if="isMenuOpen"
-          class="absolute top-0 left-0 w-full text-azul-500 bg-gray-100"
+          class="absolute top-0 left-0 w-full text-gray-200 bg-gray-900"
         >
           <div class="p-5 border rounded shadow-sm">
             <div class="flex items-center justify-between mb-4">
@@ -140,8 +140,7 @@
                   <a
                     href="#Trasporte"
                     aria-label="Our product"
-                    title="Our product"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
                     >Trasporte
                   </a>
                 </li>
@@ -149,8 +148,7 @@
                   <a
                     href="#Ejecutivo"
                     aria-label="Our product"
-                    title="Our product"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
                   >
                     Ejecutivo</a
                   >
@@ -159,8 +157,7 @@
                   <a
                     href="#Tours"
                     aria-label="Product pricing"
-                    title="Product pricing"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
                     >Tours</a
                   >
                 </li>
@@ -168,8 +165,7 @@
                   <a
                     href="#Sistema"
                     aria-label="About us"
-                    title="About us"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
                     >Sistema</a
                   >
                 </li>
@@ -177,8 +173,7 @@
                   <a
                     href="#Nosotros"
                     aria-label="About us"
-                    title="About us"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
                     >Nosotros</a
                   >
                 </li>
@@ -192,11 +187,14 @@
 
   <!---heroe-->
   <div class="relative heroe">
-    <img
-      src="https://images.pexels.com/photos/3747463/pexels-photo-3747463.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+    <video
+      src="/src/assets/video/video5.mp4"
+      autoplay
+      loop
+      muted
       class="absolute inset-0 object-cover w-full h-full"
-      alt=""
-    />
+    ></video>
+    <!--<img src="/src/assets/img.jpg" class="absolute inset-0 object-cover w-full h-full" alt="" />-->
     <div class="relative bg-azul-900 bg-opacity-60 flex items-center">
       <div class="my-20 mx-auto sm:max-w-xl md:max-w-full lg:py-20">
         <div
@@ -296,7 +294,7 @@
                 <div class="max-w-xl lg:max-w-3xl">
                   <div class="relative -mt-16 block lg:hidden">
                     <h1
-                      class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
+                      class="mt-2 text-2xl font-bold text-azul-100 sm:text-3xl md:text-4xl"
                     >
                       Bienvenidos a SITT 🚍
                     </h1>

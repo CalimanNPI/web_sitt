@@ -62,8 +62,8 @@
       class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
     >
       <img
-        class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-        src="/src/assets/tour14.jpg"
+        class="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[20rem]"
+        src="/src/assets/img2.jpg"
         alt=""
       />
     </div>
@@ -77,7 +77,7 @@
         data-aos-duration="500"
         class="lg:pr-4"
       >
-        <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+        <div class="max-w-xl text-base text-gray-700 lg:max-w-lg">
           <ul role="list" class="mt-8 space-y-8 text-gray-600">
             <li class="flex gap-x-3">
               <svg
@@ -175,72 +175,7 @@
     </div>
   </div>
 
-  <div class="about bg-gray-900 py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-1 lg:px-2">
-      <h2
-        data-aos="zoom-in-down"
-        data-aos-easing="linear"
-        data-aos-duration="500"
-        class="text-center text-lg font-semibold leading-8 text-gray-200"
-      >
-        Con la confianza de los equipos más confortables del mundo
-      </h2>
-      <div
-        class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
-      >
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 max-h-15 w-full object-contain lg:col-span-1"
-          src="/src/assets/icons/J_J.png"
-          alt="Transistor"
-          width="48"
-          height="48"
-        />
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 max-h-15 w-full object-contain lg:col-span-1"
-          src="/src/assets/icons/JANSSEN.png"
-          alt="Reform"
-          width="48"
-          height="48"
-        />
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 max-h-15 w-full object-contain lg:col-span-1"
-          src="/src/assets/icons/LILLY.png"
-          alt="Tuple"
-          width="48"
-          height="48"
-        />
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 max-h-15 w-full object-contain sm:col-start-2 lg:col-span-1"
-          src="/src/assets/icons/PAREXEL.png"
-          alt="SavvyCal"
-          width="48"
-          height="48"
-        />
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 col-start-2 max-h-15 w-full object-contain sm:col-start-auto lg:col-span-1"
-          src="/src/assets/icons/PEPSI.png"
-          alt="Statamic"
-          width="48"
-          height="48"
-        />
-      </div>
-    </div>
-  </div>
+  
 </template>
 
 <script>
