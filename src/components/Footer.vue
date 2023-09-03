@@ -14,7 +14,7 @@
       ></path>
     </svg>
     <div
-      class="bg-gradient-to-b from-azul-500 to-gray-900 mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
+      class="bg-gradient-to-b from-azul-500 to-gray-900 w-full px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
     >
       <div class="lg:flex lg:items-end lg:justify-between">
         <div>
