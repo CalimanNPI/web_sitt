@@ -22,7 +22,7 @@
             <!----Logo-->
             <img
               src="/src/assets/svg-formatter-beautifier.png"
-              class="h-20 mr-3"
+              class="h-20 mr-3 sm:mb-10"
             />
           </div>
         </div>
