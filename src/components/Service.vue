@@ -182,8 +182,8 @@ export default {
           data-aos="zoom-in-down"
           data-aos-easing="linear"
           data-aos-duration="500"
-          class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-          src="/src/assets/img4.jpg"
+          class="object-contain w-full h-56 rounded shadow-lg sm:h-96 cursor-pointer filter grayscale hover:grayscale-0"
+          src="/src/assets/img15.jpg"
           alt=""
         />
       </div>

@@ -36,7 +36,7 @@
         </div>
         <div aria-hidden="true" class="mt-10 lg:mt-0">
           <img
-            src="/src/assets/toyota.jpg"
+            src="/src/assets/autos.jpeg"
             alt=""
             class="mx-auto rounded-lg shadow-lg bg-azul-500"
           />

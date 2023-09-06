@@ -15,7 +15,9 @@
         title="Company"
         class="inline-flex items-center"
       >
-        <span class="ml-2 text-xl font-bold tracking-wide uppercase">SITT</span>
+        <img src="/src/assets/svg-formatter-beautifier.png" class="h-20 mr-3" />
+        <!--Logo
+        <span class="ml-2 text-xl font-bold tracking-wide uppercase">SITT</span>-->
       </a>
       <ul class="items-center hidden space-x-8 lg:flex">
         <li>
@@ -188,14 +190,14 @@
   <!---heroe-->
   <div class="relative heroe">
     <video
-      src="/src/assets/video/video5.mp4"
+      src="/src/assets/video/video9.mp4"
       autoplay
       loop
       muted
       class="absolute inset-0 object-cover w-full h-full"
     ></video>
     <!--<img src="/src/assets/img.jpg" class="absolute inset-0 object-cover w-full h-full" alt="" />-->
-    <div class="relative bg-azul-900 bg-opacity-60 flex items-center">
+    <div class="relative bg-gray-950 bg-opacity-60 flex items-center">
       <div class="my-20 mx-auto sm:max-w-xl md:max-w-full lg:py-20">
         <div
           class="w-full mb-12 xl:mb-0 flex flex-col justify-center items-center text-gray-100"

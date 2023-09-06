@@ -6,7 +6,7 @@
       viewBox="0 0 1367.743 181.155"
     >
       <path
-        class="fill-current text-azul-500"
+        class="fill-current text-gray-800"
         id="wave"
         data-name="wave"
         d="M0,0S166.91-56.211,405.877-49.5,715.838,14.48,955.869,26.854,1366,0,1366,0V115H0Z"
@@ -14,12 +14,16 @@
       ></path>
     </svg>
     <div
-      class="bg-gradient-to-b from-azul-500 to-gray-900 w-full px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
+      class="bg-gradient-to-b from-gray-800 to-gray-900 w-full px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
     >
       <div class="lg:flex lg:items-end lg:justify-between">
         <div>
           <div class="flex justify-center text-gray-200 lg:justify-start">
-            SITT
+            <!----Logo-->
+            <img
+              src="/src/assets/svg-formatter-beautifier.png"
+              class="h-20 mr-3"
+            />
           </div>
         </div>
 
