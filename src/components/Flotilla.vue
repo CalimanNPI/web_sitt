@@ -95,7 +95,7 @@
         </div>
         <div aria-hidden="true" class="mt-10 lg:mt-0">
           <img
-            src="/src/assets/sprinter3.jpg"
+            src="/src/assets/autos2.jpeg"
             alt=""
             class="mx-auto rounded-lg shadow-lg bg-azul-500"
           />

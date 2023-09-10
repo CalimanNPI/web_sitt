@@ -157,7 +157,7 @@ export default {
                   ></path>
                 </svg>
               </span>
-              Servicio por horas
+              Servicio por horas.
             </li>
             <li class="flex">
               <span class="mr-1">
@@ -172,7 +172,7 @@ export default {
                   ></path>
                 </svg>
               </span>
-              Servicio a disposición
+              Servicio a disposición.
             </li>
           </ul>
         </div>
@@ -182,8 +182,8 @@ export default {
           data-aos="zoom-in-down"
           data-aos-easing="linear"
           data-aos-duration="500"
-          class="object-contain w-full h-56 rounded shadow-lg sm:h-96 cursor-pointer filter grayscale hover:grayscale-0"
-          src="/src/assets/img15.jpg"
+          class="object-contain w-full h-56 rounded  sm:h-96 cursor-pointer filter "
+          src="/src/assets/img13.jpg"
           alt=""
         />
       </div>
