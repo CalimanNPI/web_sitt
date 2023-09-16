@@ -63,7 +63,7 @@
           </div>
           <div class="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
             <img
-              src="/src/assets/autos.jpeg"
+              src="/src/assets/autos3.jpeg"
               alt=""
               class="mx-auto rounded-lg shadow-lg bg-azul-500"
             />
