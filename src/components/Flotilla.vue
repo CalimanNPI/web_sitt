@@ -9,7 +9,7 @@
         <h2
           class="text-3xl font-bold tracki text-center sm:text-5xl text-gray-200"
         >
-          Trasporte
+          TRANSPORTE
         </h2>
         <p class="max-w-3xl mx-auto mt-4 text-xl text-center text-gray-400">
           Para brindar el mejor servicio contamos con vehículos de lujo que
@@ -25,7 +25,7 @@
       >
         <div>
           <h3 class="text-2xl font-normal tracki sm:text-3xl text-gray-200">
-            TRANSPORTE
+            Transporte
             <span class="font-bold text-azul-400"> Empresarial</span>
           </h3>
           <p class="mt-3 text-lg text-gray-400">
@@ -51,7 +51,6 @@
         <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
           <div class="lg:col-start-2">
             <h3 class="text-2xl font-normal tracki sm:text-3xl text-gray-200">
-              Transporte
               <span class="font-bold text-azul-400"> Suv's Ejecutivas</span>
             </h3>
             <p class="mt-3 text-lg text-gray-400">
@@ -79,8 +78,6 @@
       >
         <div>
           <h3 class="text-2xl font-normal tracki sm:text-3xl text-gray-200">
-            Transporte
-
             <span class="font-bold text-azul-400">
               Mercedes-Benz Sprinter
             </span>
