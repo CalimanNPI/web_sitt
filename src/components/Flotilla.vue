@@ -25,7 +25,7 @@
       >
         <div>
           <h3 class="text-2xl font-normal tracki sm:text-3xl text-gray-200">
-            Transporte
+            TRANSPORTE
             <span class="font-bold text-azul-400"> Empresarial</span>
           </h3>
           <p class="mt-3 text-lg text-gray-400">
