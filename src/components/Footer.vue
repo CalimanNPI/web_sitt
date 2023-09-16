@@ -20,7 +20,7 @@
         <div>
           <div class="flex justify-center text-gray-200 lg:justify-start">
             <!----Logo-->
-            <img src="/src/assets/logo.png" class="h-20 mr-3" />
+            <img src="/src/assets/logos/logo_ba.png" class="h-20 mr-3" />
           </div>
         </div>
 

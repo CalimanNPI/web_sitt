@@ -15,7 +15,14 @@
         title="Company"
         class="inline-flex items-center"
       >
-        <img src="/src/assets/logo.png" class="h-20 mr-3" />
+        <img
+          :src="[
+            scrollPosition > 500
+              ? '/src/assets/logos/logo_a.png'
+              : '/src/assets/logos/logo_ba.png',
+          ]"
+          class="h-20 mr-3"
+        />
         <!--Logo
         <span class="ml-2 text-xl font-bold tracking-wide uppercase">SITT</span>-->
       </a>
