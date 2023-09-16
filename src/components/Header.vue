@@ -15,7 +15,7 @@
         title="Company"
         class="inline-flex items-center"
       >
-        <img src="/src/assets/svg-formatter-beautifier.png" class="h-20 mr-3" />
+        <img src="/src/assets/logo.png" class="h-20 mr-3" />
         <!--Logo
         <span class="ml-2 text-xl font-bold tracking-wide uppercase">SITT</span>-->
       </a>
@@ -115,9 +115,7 @@
                   title="Company"
                   class="hover:scale-125 inline-flex items-center"
                 >
-                  <span class="ml-2 text-xl font-bold tracking-wideuppercase"
-                    >SITT</span
-                  >
+                  <img src="/src/assets/logo.png" class="h-20 mr-3" />
                 </a>
               </div>
               <div>
@@ -189,7 +187,7 @@
 
   <!---heroe-->
   <div class="relative heroe">
-    <video 
+    <video
       src="/src/assets/video/video16.mp4"
       autoplay
       loop
