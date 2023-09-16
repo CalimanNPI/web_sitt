@@ -207,7 +207,7 @@
             data-aos-duration="1500"
             class="max-w-4xl mb-10 text-6xl text-center font-bold tracking-tight sm:text-7xl"
           >
-            Servicios Integrales de
+            Servicios Integrales en
             <span class="text-teal-accent-400"
               >Transporte Ejecutivo y Turístico</span
             >

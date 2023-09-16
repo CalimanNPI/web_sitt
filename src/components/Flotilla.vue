@@ -86,10 +86,10 @@
             </span>
           </h3>
           <p class="mt-3 text-lg text-gray-400">
-            Ideal para el transporte de turismo o grupal, con capacidad hasta de
-            17 pasajeros. Cuentan con cómodos asientos ajustables y cinturones
-            independientes, sistemas inteligentes de manejo, sistemas de
-            asistencia de conducción, luces de niebla, escalón eléctrico y
+            Ideal para el transporte de turismo o grupal, con capacidad a partir
+            de 17 a 20 pasajeros.Cuentan con cómodos asientos ajustables y
+            cinturones independientes, sistemas inteligentes de manejo, sistemas
+            de asistencia de conducción, luces de niebla, escalón eléctrico y
             sistema de presión de monitoreo de neumáticos.
           </p>
         </div>
