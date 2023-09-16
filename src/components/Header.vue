@@ -122,7 +122,7 @@
                   title="Company"
                   class="hover:scale-125 inline-flex items-center"
                 >
-                  <img src="/src/assets/logo.png" class="h-20 mr-3" />
+                  <img src="/src/assets/logos/logo_ba.png" class="h-20 mr-3" />
                 </a>
               </div>
               <div>
