@@ -51,7 +51,7 @@
         <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
           <div class="lg:col-start-2">
             <h3 class="text-2xl font-normal tracki sm:text-3xl text-gray-200">
-              <span class="font-bold text-azul-400"> Suv's Ejecutivas</span>
+              Suv's <span class="font-bold text-azul-400"> Ejecutivas</span>
             </h3>
             <p class="mt-3 text-lg text-gray-400">
               Gracias a sus características de diseño, estas SUV´s ofrecen una
@@ -78,9 +78,7 @@
       >
         <div>
           <h3 class="text-2xl font-normal tracki sm:text-3xl text-gray-200">
-            <span class="font-bold text-azul-400">
-              Mercedes-Benz Sprinter
-            </span>
+            Mercedes-Benz<span class="font-bold text-azul-400"> Sprinter </span>
           </h3>
           <p class="mt-3 text-lg text-gray-400">
             Ideal para el transporte de turismo o grupal, con capacidad a partir

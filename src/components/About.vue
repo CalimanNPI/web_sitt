@@ -99,10 +99,7 @@
                 ><strong class="font-semibold text-gray-900"
                   >Autos confortables.</strong
                 >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.</span
-              >
+              </span>
             </li>
             <li class="flex gap-x-3">
               <svg
@@ -124,9 +121,7 @@
                 ><strong class="font-semibold text-gray-900"
                   >SUV’S versátiles.</strong
                 >
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo.</span
-              >
+              </span>
             </li>
             <li class="flex gap-x-3">
               <svg
@@ -147,9 +142,7 @@
                 ><strong class="font-semibold text-gray-900"
                   >Vans ejecutivas Mercedes-Benz.</strong
                 >
-                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
-                Et magna sit morbi lobortis.</span
-              >
+              </span>
             </li>
           </ul>
           <p class="mt-8"></p>
@@ -174,8 +167,6 @@
       </div>
     </div>
   </div>
-
-  
 </template>
 
 <script>
