@@ -182,8 +182,8 @@ export default {
           data-aos="zoom-in-down"
           data-aos-easing="linear"
           data-aos-duration="500"
-          class="object-contain w-full h-56 rounded  sm:h-96 cursor-pointer filter "
-          src="/src/assets/img13.jpg"
+          class="object-contain w-full h-56 rounded sm:h-96 cursor-pointer filter"
+          src="/src/assets/img_service.jpeg"
           alt=""
         />
       </div>
@@ -231,22 +231,14 @@ export default {
     </div>
     <div class="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto">
       <div class="grid grid-cols-2 gap-5">
-        <video
-          src="/src/assets/video/video3.mp4"
-          autoplay
-          loop
-          controls 
-          
-          class="object-cover w-full h-56 col-span-2 rounded shadow-lg transition duration-200 group-hover:scale-110"
-        ></video>
-        <!--<img
+        <img
           data-aos="zoom-in-down"
           data-aos-easing="linear"
           data-aos-duration="500"
-          class="object-cover w-full h-56 col-span-2 rounded shadow-lg transition duration-200 group-hover:scale-110 "
-          src="/src/assets/tour19.jpg"
+          class="object-cover w-full h-56 col-span-2 rounded shadow-lg transition duration-200 group-hover:scale-110"
+          src="/src/assets/tour19.jpeg"
           alt=""
-        />-->
+        />
         <img
           data-aos="zoom-out-right"
           data-aos-easing="linear"

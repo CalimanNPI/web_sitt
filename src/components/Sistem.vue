@@ -12,7 +12,7 @@ export default {
 
 <style>
 .sistema {
-  background-image: url("@/assets/tour16.jpg");
+  background-image: url("@/assets/sistema.jpeg");
   background-position: center center;
   background-blend-mode: multiply;
   background-size: cover;
