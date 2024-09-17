@@ -63,7 +63,7 @@
     >
       <img
         class="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[20rem]"
-        src="/src/assets/img2.jpeg"
+        src="/src/assets/about.jpeg"
         alt=""
       />
     </div>
@@ -71,15 +71,14 @@
     <div
       class="pl-4 lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
     >
-      <div
-        data-aos="zoom-in-down"
-        data-aos-easing="linear"
-        data-aos-duration="500"
-        class="lg:pr-4"
-      >
+      <div class="lg:pr-4">
         <div class="max-w-xl text-base text-gray-700 lg:max-w-lg">
           <ul role="list" class="mt-8 space-y-8 text-gray-600">
-            <li class="flex gap-x-3">
+            <li
+              class="flex gap-x-3"
+              data-aos="zoom-in-down"
+              data-aos-duration="500"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 300 300"
@@ -101,7 +100,11 @@
                 >
               </span>
             </li>
-            <li class="flex gap-x-3">
+            <li
+              class="flex gap-x-3"
+              data-aos="zoom-in-down"
+              data-aos-duration="500"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 300 300"
@@ -123,7 +126,11 @@
                 >
               </span>
             </li>
-            <li class="flex gap-x-3">
+            <li
+              class="flex gap-x-3"
+              data-aos="zoom-in-down"
+              data-aos-duration="500"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 300 300"
@@ -149,7 +156,10 @@
           <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">
             Nuestra Visión.
           </h2>
-          <p class="mt-6">
+          <p class="mt-6" 
+        data-aos="zoom-in-down"
+        data-aos-easing="linear"
+        data-aos-duration="500">
             Consolidarnos como empresa líder en transportación integral con
             personal capacitado y unidades en óptimas condiciones, que nos
             permita ofrecer una experiencia única en cada trayecto.
@@ -158,7 +168,10 @@
           <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">
             Nuestra Misión.
           </h2>
-          <p class="mt-6">
+          <p class="mt-6" 
+        data-aos="zoom-in-down"
+        data-aos-easing="linear"
+        data-aos-duration="500">
             Nos esmeramos en ofrecer a nuestros clientes y usuarios seguridad,
             comunicación, eficiencia, puntualidad y confort en cada traslado. Al
             mismo tiempo, generar relaciones comerciales duraderas.

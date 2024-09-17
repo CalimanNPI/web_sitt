@@ -188,7 +188,7 @@
   <!---heroe-->
   <div class="relative heroe">
     <video
-      src="/src/assets/video/video16.mp4"
+      src="/src/assets/video16.mp4"
       autoplay
       loop
       muted
@@ -268,7 +268,7 @@
               >
                 <img
                   alt="Night"
-                  src="/src/assets/tour21.jpg"
+                  src="/src/assets/contact.jpg"
                   class="absolute inset-0 h-full w-full object-cover opacity-80"
                 />
 

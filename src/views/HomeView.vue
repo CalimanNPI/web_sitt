@@ -6,7 +6,6 @@ import Service from "../components/Service.vue";
 import Sistem from "../components/Sistem.vue";
 import Team from "../components/Team.vue";
 import Footer from "../components/Footer.vue";
-import FAQs from "../components/FAQs.vue";
 import Stats from "../components/Stats.vue";
 </script>
 
