@@ -15,7 +15,6 @@ import Stats from "../components/Stats.vue";
   <Flotilla />
   <Service />
   <Sistem />
-  <Team />
   <Stats />
   <Footer />
 </template>

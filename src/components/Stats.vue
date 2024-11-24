@@ -1,62 +1,21 @@
 <template>
-  <div class="about py-15 sm:py-20 stats" >
+  <div class="about py-15 sm:py-20 stats">
     <div class="mx-auto container px-1 lg:px-2">
-      <div class="text-xl text-center text-semibold text-gray-900">Con la confianza de más de   
-            <span class="text-azul-500 font-bold">2000</span> clientes
-        </div>
+      <div class="font-sans mb-8 text-center text-4xl font-extrabold leading-none tracking-tight md:pl-2">Con la confianza de más de
+        <span class="text-azul-500 font-bold">2000</span> clientes
+      </div>
       <div
-        class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
-      >
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 max-h-15 w-full object-contain lg:col-span-1"
-          src="/src/assets/icons/J_J.png"
-          alt="Transistor"
-          width="48"
-          height="48"
-        />
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 max-h-15 w-full object-contain lg:col-span-1"
-          src="/src/assets/icons/JANSSEN.png"
-          alt="Reform"
-          width="48"
-          height="48"
-        />
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 max-h-15 w-full object-contain lg:col-span-1"
-          src="/src/assets/icons/LILLY.png"
-          alt="Tuple"
-          width="48"
-          height="48"
-        />
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 max-h-15 w-full object-contain sm:col-start-2 lg:col-span-1"
-          src="/src/assets/icons/PAREXEL.png"
-          alt="SavvyCal"
-          width="48"
-          height="48"
-        />
-        <img
-          data-aos="flip-left"
-          data-aos-easing="linear"
-          data-aos-duration="500"
-          class="col-span-2 col-start-2 max-h-15 w-full object-contain sm:col-start-auto lg:col-span-1"
-          src="/src/assets/icons/PEPSI.png"
-          alt="Statamic"
-          width="48"
-          height="48"
-        />
+        class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <img data-aos="flip-left" class="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
+          src="/src/assets/icons/J_J.png" />
+        <img data-aos="flip-left" class="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
+          src="/src/assets/icons/JANSSEN.png" />
+        <img data-aos="flip-left" class="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
+          src="/src/assets/icons/LILLY.png" />
+        <img data-aos="flip-left" class="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
+          src="/src/assets/icons/PAREXEL.png" />
+        <img data-aos="flip-left" class="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
+          src="/src/assets/icons/PEPSI.png" />
       </div>
     </div>
   </div>
