@@ -91,8 +91,8 @@ export default {
         </div>
       </div>
       <div>
-        <img data-aos="zoom-in-down" class="object-contain w-full h-56 rounded sm:h-96 cursor-pointer filter"
-          src="/src/assets/img_service.jpeg" alt="" />
+        <img data-aos="zoom-in-down" class="object-contain w-full rounded cursor-pointer"
+          src="/src/assets/flotilla/2.jfif" alt="" />
       </div>
     </div>
   </div>

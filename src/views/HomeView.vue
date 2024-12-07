@@ -10,13 +10,15 @@ import Stats from "../components/Stats.vue";
 </script>
 
 <template>
-  <Header />
-  <About />
-  <Flotilla />
-  <Service />
-  <Sistem />
-  <Stats />
-  <Footer />
+  <div class="bg-white">
+    <Header />
+    <About />
+    <Flotilla />
+    <Service />
+    <Sistem />
+    <Stats />
+    <Footer />
+  </div>
 </template>
 
 <style></style>
