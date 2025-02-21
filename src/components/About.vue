@@ -10,7 +10,7 @@
     </div>
     <h1 data-aos="zoom-in-down" class="text-4xl font-extrabold leading-none tracking-tight sm:text-6xl text-gray-700">
       Somos una empresa 100% mexicana, especializada en
-      <span class="text-azul-400">servicio de transporte ejecutivo y turístico.</span>
+      <span class="text-azul-400">servicio de transporte turístico y ejecutivo.</span>
     </h1>
   </div>
 
