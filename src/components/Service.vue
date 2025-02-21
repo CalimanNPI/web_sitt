@@ -92,7 +92,7 @@ export default {
       </div>
       <div>
         <img data-aos="zoom-in-down" class="object-contain w-full rounded cursor-pointer"
-          src="/src/assets/flotilla/2.jfif" alt="" />
+          src="/src/assets/flotilla/img_service.jpeg" alt="" />
       </div>
     </div>
   </div>

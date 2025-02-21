@@ -26,7 +26,7 @@
           </p>
         </div>
         <div aria-hidden="true" class="mt-10 lg:mt-0" data-aos="fade-left">
-          <img src="/src/assets/flotilla/EJECUTIVAS4.jfif" alt="" class="mx-auto rounded-lg shadow-lg bg-azul-500" />
+          <img src="/src/assets/flotilla/autos.jpeg" alt="" class="mx-auto rounded-lg shadow-lg bg-azul-500" />
         </div>
       </div>
 
@@ -44,7 +44,7 @@
             </p>
           </div>
           <div class="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1" data-aos="fade-left">
-            <img src="/src/assets/flotilla/EMPRESARIAL2.jfif" alt="" class="mx-auto rounded-lg shadow-lg bg-azul-500" />
+            <img src="/src/assets/flotilla/autos3.jpeg" alt="" class="mx-auto rounded-lg shadow-lg bg-azul-500" />
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
           </p>
         </div>
         <div aria-hidden="true" class="mt-10 lg:mt-0" data-aos="fade-left">
-          <img src="/src/assets/flotilla/SPRINTER3.jfif" alt="" class="mx-auto rounded-lg shadow-lg bg-azul-500" />
+          <img src="/src/assets/flotilla/autos2.jpeg" alt="" class="mx-auto rounded-lg shadow-lg bg-azul-500" />
         </div>
       </div>
     </div>

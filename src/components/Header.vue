@@ -116,7 +116,7 @@
           <hr class="w-full my-8 border-gray-200" />
           <h2 data-aos="fade-up" class="max-w-4xl mb-10 text-center text-4xl font-extrabold leading-none tracking-tight sm:text-7xl">
             Servicios Integrales en
-            <span class="text-teal-accent-400">Transporte Ejecutivo y Turístico</span>
+            <span class="text-teal-accent-400">Transporte Turístico y Ejecutivo</span>
           </h2>
           <!--<div
             class="border-2 w-40 sm:w-30 text-center p-3 text-gray-100 hover:text-azul-500 ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 duration-300"
@@ -230,7 +230,7 @@
                             </g>
                           </g>
                         </svg>
-                        <span class="text-base font-extrabold leading-none tracking-tight">5591528576</span>
+                        <span class="text-base font-extrabold leading-none tracking-tight">5591528674</span>
                       </p>
                       <p class="flex items-center mr-2 sm:mr-6">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
