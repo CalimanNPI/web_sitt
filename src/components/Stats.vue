@@ -1,5 +1,5 @@
 <template>
-  <div class="about py-15 sm:py-20 stats">
+  <div class="about py-16 mb-20 stats">
     <div class="mx-auto container px-1 lg:px-2">
       <div class="font-sans mb-8 text-center text-4xl font-extrabold leading-none tracking-tight md:pl-2">Con la confianza de más de
         <span class="text-azul-500 font-bold">2000</span> clientes

@@ -12,9 +12,9 @@ export default {
 
 <template>
   <div id="Ejecutivo"
-    class="relative font-sans px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    class="relative font-sans mb-20 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0">
-      <svg viewBox="0 0 88 88" class="w-full max-w-screen-xl text-gray-200">
+      <svg viewBox="0 0 88 88" class="w-full  text-blue-500/20">
         <circle fill="currentColor" cx="44" cy="44" r="15.5"></circle>
         <circle fill-opacity="0.2" fill="currentColor" cx="44" cy="44" r="44"></circle>
         <circle fill-opacity="0.2" fill="currentColor" cx="44" cy="44" r="37.5"></circle>
@@ -25,12 +25,17 @@ export default {
     <div class="relative grid gap-5 row-gap-10 lg:grid-cols-2">
       <div data-aos="zoom-in-down" class="flex flex-col justify-center">
         <div class="max-w-xl mb-6">
-          <h2 class="max-w-lg mb-6 text-4xl font-extrabold leading-none tracking-tight text-gray-900 ">
-            Servicio
-            <span class="relative px-1">
-              <div class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-azul-400"></div>
-              <span class="relative inline-block">Ejecutivo</span>
-            </span>
+          <h2 class="max-w-lg mb-6 text-5xl font-extrabold leading-none tracking-tight text-blue-500 ">
+        
+
+              <span class="relative inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"
+            class="absolute top-2 left-0 z-0 hidden w-32 -mt-20 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-20 sm:block">
+            <path fill="#111827" d="M19.38 16.87H179.17V176.66H19.38z"></path>
+            <path fill="#1E88E5" d="M114.44 115.5H233.79V234.85H114.44z"></path>
+            <path fill="#a5cff5" d="M187.8 184.18H279.79V276.17H187.8z"></path>
+          </svg>
+          <span class="relative text-gray-900">Servicio</span></span> Ejecutivo
           </h2>
           <p class="text-lg font-medium tracking-wider leading-relaxed text-gray-700">
             Comprometidos en ofrecer una gama completa de opciones para resolver
@@ -43,21 +48,21 @@ export default {
         </p>
         <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0 text-base font-extrabold tracking-wider leading-relaxed text-gray-700 uppercase">
           <ul class="space-y-3 ">
-            <li class="flex items-center ">
+            <li class="flex items-center" data-aos="zoom-in-left">
               <span class="mr-1">
                 <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=rGzjKLN0kn3O&format=png&color=1e88e5"
                   alt="wallmount-camera" />
               </span>
               Meet & greet Transfer.
             </li>
-            <li class="flex items-center">
+            <li class="flex items-center" data-aos="zoom-in-left">
               <span class="mr-1">
                 <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=ZX1aN99PDj4E&format=png&color=1e88e5"
                   alt="wallmount-camera" />
               </span>
               Drop off.
             </li>
-            <li class="flex items-center">
+            <li class="flex items-center" data-aos="zoom-in-left">
               <span class="mr-1">
                 <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=ampvNvsTTwqT&format=png&color=1e88e5"
                   alt="wallmount-camera" />
@@ -66,21 +71,21 @@ export default {
             </li>
           </ul>
           <ul class="space-y-3">
-            <li class="flex items-center">
+            <li class="flex items-center" data-aos="zoom-in-left">
               <span class="mr-1">
                 <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=8_YULh6oHPbc&format=png&color=1e88e5"
                   alt="wallmount-camera" />
               </span>
               Traslados foráneos.
             </li>
-            <li class="flex items-center">
+            <li class="flex items-center" data-aos="zoom-in-left">
               <span class="mr-1">
                 <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=fZkUxrxLApKy&format=png&color=1e88e5"
                   alt="wallmount-camera" />
               </span>
               Servicio por horas.
             </li>
-            <li class="flex items-center">
+            <li class="flex items-center" data-aos="zoom-in-left">
               <span class="mr-1">
                 <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=67447&format=png&color=1e88e5"
                   alt="wallmount-camera" />
@@ -99,10 +104,10 @@ export default {
 
   <!--tour -->
   <div id="Tours"
-    class="services font-sans px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    class="services font-sans px-4 py-16 mb-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div data-aos="zoom-in-down" class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
 
-      <h2 class="max-w-lg mb-6 text-4xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+      <h2 class="max-w-lg mb-6 text-5xl font-extrabold leading-none tracking-tight text-blue-500  md:mx-auto">
         <span class="relative inline-block">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"
             class="absolute top-2 left-0 z-0 hidden w-32 -mt-20 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-20 sm:block">
@@ -110,7 +115,7 @@ export default {
             <path fill="#1E88E5" d="M114.44 115.5H233.79V234.85H114.44z"></path>
             <path fill="#a5cff5" d="M187.8 184.18H279.79V276.17H187.8z"></path>
           </svg>
-          <span class="relative"> Servicio </span> </span>Turístico.
+          <span class="relative text-gray-900">Servicio</span></span> Turístico
       </h2>
       <p class="text-lg font-medium tracking-wider leading-relaxed text-gray-700 z-20">
         Descubre mundos nuevos y crea recuerdos inolvidables en cada viaje. Con nosotros, tu próxima aventura está a un

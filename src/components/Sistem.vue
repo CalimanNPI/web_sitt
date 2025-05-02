@@ -20,14 +20,14 @@ export default {
 </style>
 
 <template>
-  <div id="Sistema" class="w-full bg-azul-900 bg-opacity-60 sistema font-sans" style="">
+  <div id="Sistema" class="w-full bg-azul-900 bg-opacity-60 py-16 mb-20 sistema font-sans" style="">
     <div
       class="container text-gray-200 flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
-      <h5 class="mb-8 text-4xl font-extrabold leading-none tracking-tight md:pl-2" data-aos="zoom-in-down" data-aos-duration="500">
+      <h5 class="mb-8 text-5xl font-extrabold leading-none tracking-tight md:pl-2" data-aos="zoom-in-down" data-aos-duration="500">
         Sistema integral de
         <br class="hidden md:block" />
 
-        <span class="inline-block text-deep-purple-accent-400">Transporte.</span>
+        <span class="inline-block text-6xl text-azul-400">Transporte</span>
       </h5>
       <div class="grid gap-3 row-gap-3 lg:grid-cols-3 ext-lg font-medium tracking-wider leading-relaxed text-gray-200">
         <ul class="space-y-3">
