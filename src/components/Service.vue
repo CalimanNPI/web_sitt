@@ -122,15 +122,15 @@ export default {
         clic de distancia.
       </p>
     </div>
-    <div class="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto">
-      <div class="grid grid-cols-2 gap-5">
-        <img data-aos="zoom-in-down"
+    <div class="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto" >
+      <div class="grid grid-cols-2 gap-5" >
+        <img 
           class="object-cover w-full h-56 col-span-2 rounded shadow-lg transition duration-200 group-hover:scale-110"
           src="/src/assets/tour1.jpeg" alt="" />
-        <img data-aos="zoom-out-right"
+        <img 
           class="object-cover w-full h-48 rounded shadow-lg transition duration-200 group-hover:scale-110"
           src="/src/assets/tour2.jpg" alt="" />
-        <img data-aos="zoom-out-left"
+        <img 
           class="object-cover w-full h-48 rounded shadow-lg transition duration-200 group-hover:scale-110"
           src="/src/assets/tour3.jpg" alt="" />
       </div>

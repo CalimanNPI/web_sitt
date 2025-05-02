@@ -28,9 +28,10 @@
       </p>
     </div>
   </div>
+  
   <div class="h-1 w-screen">
     <svg
-      class="inline-block fill-current w-full h-auto text-blue-400/20"
+      class="inline-block fill-current w-full  text-blue-400/20"
       viewBox="0 0 1440 450"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -76,7 +77,6 @@
         <div class="md:col-span-2">
           <img
             src="/src/assets/flotilla/autos.jpeg"
-            data-aos="zoom-in"
             class="w-full max-w-none rounded-md shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
           />
         </div>
@@ -86,7 +86,7 @@
 
   <div class="h-1 w-screen">
     <svg
-      class="inline-block fill-current w-full h-auto text-blue-400/20"
+      class="inline-block fill-current w-full  text-blue-400/20"
       viewBox="0 0 1440 450"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -130,7 +130,6 @@
         <div class="md:col-span-2 order-2 sm:order-1">
           <img
             src="/src/assets/flotilla/autos3.jpeg"
-            data-aos="zoom-in"
             class="w-full max-w-none rounded-md shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
           />
         </div>
@@ -140,7 +139,7 @@
 
   <div class="h-1 w-screen">
     <svg
-      class="inline-block fill-current w-full h-auto text-blue-400/20"
+      class="inline-block fill-current w-full  text-blue-400/20"
       viewBox="0 0 1440 450"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -188,7 +187,6 @@
         <div class="md:col-span-2">
           <img
             src="/src/assets/flotilla/autos2.jpeg"
-            data-aos="zoom-in"
             class="w-full max-w-none rounded-md shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
           />
         </div>
