@@ -97,7 +97,7 @@ export default {
       </div>
       <div>
         <img data-aos="zoom-in-down" class="object-contain w-full rounded cursor-pointer"
-          src="/src/assets/flotilla/img_service.jpeg" alt="" />
+          src="/src/assets/flotilla/img_service.jpeg" alt="Servicio ejecutivo" />
       </div>
     </div>
   </div>
@@ -157,7 +157,7 @@ export default {
           <h6 class="mb-2 text-lg font-extrabold tracking-wider leading-relaxed text-gray-700 uppercase">
             Guías turísticos (inglés, francés, italiano, alemán)
           </h6>
-          <p class="tetext-lg font-medium tracking-wider leading-relaxed text-gray-700">
+            <p class="text-lg font-medium tracking-wider leading-relaxed text-gray-700">
             Todos nuestros Guías de Turistas están acreditados por la Secretaría
             de Turismo de México.
           </p>

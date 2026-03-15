@@ -2,8 +2,8 @@
   <!--flotilla-->
 
   <div
-    id="Trasporte"
-    class="services font-sans px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20"
+    id="Transporte"
+    class="flotilla services font-sans px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20"
   >
     <div
       data-aos="zoom-in-down"
@@ -77,6 +77,7 @@
         <div class="md:col-span-2">
           <img
             src="/src/assets/flotilla/autos.jpeg"
+            alt="Transporte empresarial"
             class="w-full max-w-none rounded-md shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
           />
         </div>
@@ -130,6 +131,7 @@
         <div class="md:col-span-2 order-2 sm:order-1">
           <img
             src="/src/assets/flotilla/autos3.jpeg"
+            alt="SUV ejecutivas"
             class="w-full max-w-none rounded-md shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
           />
         </div>
@@ -187,6 +189,7 @@
         <div class="md:col-span-2">
           <img
             src="/src/assets/flotilla/autos2.jpeg"
+            alt="Mercedes-Benz Sprinter"
             class="w-full max-w-none rounded-md shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
           />
         </div>

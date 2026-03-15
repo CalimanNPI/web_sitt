@@ -1,16 +1,16 @@
 <template>
   <footer>
-    <div class="bg-gradient-to-b from-gray-800 to-gray-900 w-full px-4 py-16 sm:px-6 lg:px-8 lg:pt-20">
+    <div class="w-full bg-gradient-to-b from-gray-800 to-gray-900 px-4 py-16 font-sans sm:px-6 lg:px-8 lg:pt-20">
       <div class="lg:flex lg:items-end lg:justify-between">
         <div>
           <div class="flex justify-center text-gray-200 lg:justify-start">
-            <img src="/src/assets/logos/logo_ba.png" class="h-20 mr-3" />
+            <img src="/src/assets/logos/logo_ba.png" class="mr-3 h-20" alt="Logo SITT" />
           </div>
         </div>
 
-        <ul class="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
+        <ul class="col-span-2 mt-8 flex justify-center gap-6 lg:col-span-5 lg:mt-0 lg:justify-end">
           <li>
-            <a href="/" rel="noreferrer" target="_blank" class="text-gray-200 transition hover:opacity-75">
+            <a href="/" rel="noreferrer" target="_blank" class="text-gray-200 transition hover:text-white hover:opacity-100">
               <span class="sr-only">Facebook</span>
 
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -22,7 +22,7 @@
           </li>
 
           <li>
-            <a href="/" rel="noreferrer" target="_blank" class="text-gray-200 transition hover:opacity-75">
+            <a href="/" rel="noreferrer" target="_blank" class="text-gray-200 transition hover:text-white hover:opacity-100">
               <span class="sr-only">Instagram</span>
 
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -34,7 +34,7 @@
           </li>
 
           <li>
-            <a href="/" rel="noreferrer" target="_blank" class="text-gray-200 transition hover:opacity-75">
+            <a href="/" rel="noreferrer" target="_blank" class="text-gray-200 transition hover:text-white hover:opacity-100">
               <span class="sr-only">Twitter</span>
 
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -46,21 +46,21 @@
         </ul>
       </div>
 
-      <div class="mt-8 border-t border-gray-100 pt-8">
-        <div class="sm:flex sm:justify-between">
-          <p class="text-xs text-gray-200">
-            &copy; 2023 SITT. Reservados todos los derechos.
+      <div class="mt-8 border-t border-gray-700 pt-8">
+        <div class="text-center sm:flex sm:justify-between sm:text-left">
+          <p class="text-xs text-gray-300">
+            &copy; 2026 SITT. Reservados todos los derechos.
           </p>
 
-          <ul class="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
+          <ul class="mt-6 flex flex-wrap justify-center gap-4 text-xs sm:mt-0 lg:justify-end">
             <li>
-              <a href="#" class="text-gray-200 transition hover:opacity-75">
+              <a href="#" class="text-gray-300 transition hover:text-white">
                 Términos y condiciones
               </a>
             </li>
 
             <li>
-              <a href="#" class="text-gray-200 transition hover:opacity-75">
+              <a href="#" class="text-gray-300 transition hover:text-white">
                 Política de privacidad
               </a>
             </li>

@@ -2,19 +2,19 @@
   <!--about uss-->
   <div
     id="Nosotros"
-    class="font-sans about container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-20 md:px-10 lg:px-20 xl:max-w-4xl"
+    class="font-sans about container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-20 md:px-10 lg:px-20 xl:max-w-5xl"
   >
-    <div class="border-r-4 border-azul-500 w-50">
+    <div class="w-52 border-b-4 border-azul-500">
       <p
         data-aos="zoom-in-up"
         class="px-8 mt-8 mb-12 text-lg font-extrabold leading-none tracking-tight uppercase text-gray-700"
       >
-        Quienes somos
+        Quiénes somos
       </p>
     </div>
     <h1
       data-aos="zoom-in-down"
-      class="text-4xl font-extrabold leading-none tracking-tight sm:text-6xl text-gray-700"
+      class="text-3xl font-extrabold leading-tight tracking-tight text-gray-700 sm:text-5xl"
     >
       Somos una empresa 100% mexicana, especializada en
       <span class="text-azul-400"
@@ -25,9 +25,7 @@
 
   <hr class="w-full my-8 border-blue-500/80" />
 
-  <div
-    class="about mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 mb-20 py-16"
-  >
+  <div class="about mx-auto mb-20 grid grid-cols-1 gap-x-8 gap-y-16 px-4 py-16 md:px-8 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
     <div
       class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
     >
@@ -48,14 +46,11 @@
         </div>
       </div>
     </div>
-    <div
-      data-aos="zoom-in-down"
-      class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
-    >
+    <div data-aos="zoom-in-down" class="mx-auto w-full max-w-md lg:sticky lg:top-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
       <img
-        class="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[20rem]"
+        class="w-full rounded-xl bg-gray-900 object-cover shadow-xl ring-1 ring-gray-400/10"
         src="/src/assets/about.jpeg"
-        alt=""
+        alt="Equipo de SITT"
       />
     </div>
 
@@ -107,7 +102,7 @@
               <span
                 ><strong
                   class="text-xl font-extrabold leading-none tracking-tight text-gray-900"
-                  >SUV’S versátiles.</strong
+                  >SUVs versátiles.</strong
                 >
               </span>
             </li>
@@ -129,14 +124,13 @@
               <span
                 ><strong
                   class="text-xl font-extrabold leading-none tracking-tight text-gray-900"
-                  >Vanes ejecutivas Mercedes-Benz.</strong
+                  >Vans ejecutivas Mercedes-Benz.</strong
                 >
               </span>
             </li>
           </ul>
-          <p class="mt-8"></p>
           <h2
-            class="mt-16 text-2xl font-extrabold leading-none tracking-tight text-gray-900"
+            class="mt-12 text-2xl font-extrabold leading-none tracking-tight text-gray-900"
           >
             Nuestra <span class="text-azul-500">Visión</span>
           </h2>
@@ -148,9 +142,8 @@
             personal capacitado y unidades en óptimas condiciones, que nos
             permita ofrecer una experiencia única en cada trayecto.
           </p>
-          <p class="mt-8"></p>
           <h2
-            class="mt-16 text-2xl font-extrabold leading-none tracking-tight text-gray-900"
+            class="mt-12 text-2xl font-extrabold leading-none tracking-tight text-gray-900"
           >
             Nuestra <span class="text-azul-500">Misión</span>
           </h2>

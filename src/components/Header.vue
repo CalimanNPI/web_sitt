@@ -1,556 +1,348 @@
 <template>
-  <div
+  <!-- Navbar -->
+  <header
     :class="[
       scrollPosition > 500
-        ? 'bg-white fixed drop-shadow-2xl text-azul-500 '
-        : 'bg-transparent absolute text-gray-100',
+        ? 'fixed top-0 left-0 bg-white/95 backdrop-blur-md shadow-lg text-azul-500'
+        : 'absolute top-0 left-0 bg-gradient-to-b from-black/30 to-transparent text-white',
     ]"
-    class="' z-10 px-4 py-5 w-full nav1'"
+    class="z-50 w-full px-4 py-4 transition-all duration-300"
   >
-    <div class="relative flex items-center justify-between">
+    <div class="relative flex items-center justify-between max-w-7xl mx-auto">
+      <!-- Logo -->
       <a
-        @click="goToTop()"
+        @click="goToTop"
         href="#"
-        aria-label="Company"
-        title="Company"
-        class="inline-flex items-center"
+        aria-label="SITT Ejecutivo - Ir al inicio"
+        class="inline-flex items-center transition-transform hover:scale-105"
       >
         <img
           v-if="scrollPosition < 500"
           src="/src/assets/logos/logo_ba.png"
-          class="h-20 mr-3"
+          alt="SITT Ejecutivo Logo"
+          class="h-16 md:h-20 w-auto"
         />
         <img
-          v-if="scrollPosition > 500"
+          v-else
           src="/src/assets/logos/logo_na.png"
-          class="h-20 mr-3"
+          alt="SITT Ejecutivo Logo"
+          class="h-16 md:h-20 w-auto"
         />
-        <!--Logo
-        <span class="ml-2 text-xl font-bold tracking-wide uppercase">SITT</span>-->
       </a>
-      <ul class="items-center hidden space-x-8 lg:flex">
-        <li>
-          <a
-            href="#Trasporte"
-            aria-label="Our product"
-            title="Our product"
-            class="hover:scale-300 hover:underline underline-offset-4 text-base font-extrabold leading-none tracking"
-            >Trasporte</a
-          >
-        </li>
-        <li>
-          <a
-            href="#Ejecutivo"
-            aria-label="Our product"
-            title="Our product"
-            class="hover:scale-125 hover:underline underline-offset-4 text-base font-extrabold leading-none tracking"
-            >Ejecutivo</a
-          >
-        </li>
-        <li>
-          <a
-            href="#Tours"
-            aria-label="Product pricing"
-            title="Product pricing"
-            class="hover:scale-125 hover:underline underline-offset-4 text-base font-extrabold leading-none tracking"
-            >Tours</a
-          >
-        </li>
-        <li>
-          <a
-            href="#Sistema"
-            aria-label="About us"
-            title="About us"
-            class="hover:scale-125 hover:underline underline-offset-4 text-base font-extrabold leading-none tracking"
-            >Sistema</a
-          >
-        </li>
-        <li>
-          <a
-            href="#Nosotros"
-            aria-label="About us"
-            title="About us"
-            class="hover:scale-125 hover:underline underline-offset-4 text-base font-extrabold leading-none tracking"
-            >Nosotros</a
-          >
-        </li>
-      </ul>
-      <ul class="items-center hidden space-x-8 lg:flex">
-        <li></li>
-      </ul>
 
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:block">
+        <ul class="flex items-center space-x-8">
+          <li v-for="item in navItems" :key="item.href">
+            <a
+              :href="item.href"
+              class="relative text-base font-bold tracking-wide transition-all duration-300 hover:scale-110 hover:text-azul-500 group"
+            >
+              {{ item.label }}
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-azul-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact Button -->
       <button
         data-modal-target="defaultModal"
         data-modal-toggle="defaultModal"
-        class="space-x-8 lg:flex inline-flex items-center text-gray-200 justify-center h-12 px-6 font-medium tracking-wide transition rounded shadow-md bg-azul-500 focus:shadow-outline focus:outline-none ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-azul-700 duration-300"
-        aria-label="Sign up"
-        title="Sign up"
+        class="hidden lg:inline-flex items-center justify-center h-12 px-8 font-semibold text-white transition-all duration-300 rounded-md shadow-md bg-azul-600 hover:bg-azul-700 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-azul-500 focus:ring-offset-2"
+        aria-label="Abrir formulario de contacto"
       >
         Contacto
       </button>
 
-      <div class="lg:hidden">
-        <button
-          aria-label="Open Menu"
-          title="Open Menu"
-          class="hover:scale-125 p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-          @click="isMenuOpen = true"
-        >
-          <svg class="w-7" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-            ></path>
-            <path
-              fill="currentColor"
-              d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-            ></path>
-            <path
-              fill="currentColor"
-              d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-            ></path>
-          </svg>
-        </button>
-        <div
-          v-if="isMenuOpen"
-          class="absolute top-0 left-0 w-full text-gray-200 bg-gray-900"
-        >
-          <div class="p-5 border rounded shadow-sm">
-            <div class="flex items-center justify-between mb-4">
-              <div>
-                <a
-                  href="/"
-                  aria-label="Company"
-                  title="Company"
-                  class="hover:scale-125 inline-flex items-center"
-                >
-                  <img src="/src/assets/logos/logo_ba.png" class="h-20 mr-3" />
-                </a>
-              </div>
-              <div>
-                <button
-                  aria-label="Close Menu"
-                  title="Close Menu"
-                  class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:shadow-outline"
-                  @click="isMenuOpen = false"
-                >
-                  <svg class="w-5" viewBox="0 0 24 24">
-                    <path
-                      fill="currentColor"
-                      d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
+      <!-- Mobile Menu Button -->
+      <button
+        class="lg:hidden p-2 transition-colors rounded-lg hover:bg-white/10"
+        @click="isMenuOpen = true"
+        aria-label="Abrir menú"
+        aria-expanded="isMenuOpen"
+      >
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <Transition
+      enter-active-class="transition duration-300 ease-out"
+      enter-from-class="opacity-0 -translate-x-full"
+      enter-to-class="opacity-100 translate-x-0"
+      leave-active-class="transition duration-200 ease-in"
+      leave-from-class="opacity-100 translate-x-0"
+      leave-to-class="opacity-0 -translate-x-full"
+    >
+      <div v-if="isMenuOpen" class="fixed inset-0 z-50 lg:hidden">
+        <!-- Overlay -->
+        <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" @click="isMenuOpen = false"></div>
+        
+        <!-- Drawer -->
+        <div class="fixed inset-y-0 left-0 w-full max-w-sm bg-gray-900 shadow-2xl">
+          <div class="flex flex-col h-full">
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between p-6 border-b border-gray-800">
+              <img src="/src/assets/logos/logo_ba.png" alt="SITT Ejecutivo" class="h-12 w-auto" />
+              <button
+                @click="isMenuOpen = false"
+                class="p-2 transition-colors rounded-lg hover:bg-gray-800"
+                aria-label="Cerrar menú"
+              >
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <nav>
+
+            <!-- Drawer Navigation -->
+            <nav class="flex-1 p-6 overflow-y-auto">
               <ul class="space-y-4">
-                <li>
+                <li v-for="item in navItems" :key="item.href">
                   <a
-                    href="#Trasporte"
-                    aria-label="Our product"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
-                    >Trasporte
+                    :href="item.href"
+                    class="block py-3 text-lg font-medium text-white transition-colors border-b border-gray-800 hover:text-azul-500 hover:border-azul-500"
+                    @click="isMenuOpen = false"
+                  >
+                    {{ item.label }}
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#Ejecutivo"
-                    aria-label="Our product"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
+                <li class="pt-4">
+                  <button
+                    data-modal-target="defaultModal"
+                    data-modal-toggle="defaultModal"
+                    class="w-full py-3 font-semibold text-white transition-colors rounded-md bg-azul-600 hover:bg-azul-700"
+                    @click="isMenuOpen = false"
                   >
-                    Ejecutivo</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#Tours"
-                    aria-label="Product pricing"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
-                    >Tours</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#Sistema"
-                    aria-label="About us"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
-                    >Sistema</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#Nosotros"
-                    aria-label="About us"
-                    class="hover:scale-125 hover:underline underline-offset-4 font-medium tracking-wide transition-colors duration-200 hover:text-azul-500"
-                    >Nosotros</a
-                  >
+                    Contacto
+                  </button>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </Transition>
+  </header>
 
-  <!---heroe-->
-  <div class="relative heroe h-screen">
+  <!-- Hero Section -->
+  <section class="relative h-screen overflow-hidden">
+    <!-- Video Background -->
     <video
       src="/src/assets/video16.mp4"
       autoplay
       loop
       muted
+      playsinline
       class="absolute inset-0 object-cover w-full h-full"
     ></video>
-    <!--<img src="/src/assets/img.jpg" class="absolute inset-0 object-cover w-full h-full" alt="" />-->
-    <div class="relative bg-gray-950 bg-opacity-60 flex items-center h-screen">
-      <div class="my-20 mx-auto sm:max-w-xl md:max-w-full lg:py-20">
-        <div
-          class="w-full mb-12 xl:mb-0 flex flex-col justify-center items-center text-gray-100"
-        >
-          <hr class="w-full my-8 border-blue-500" />
-          <h2
-            data-aos="fade-up"
-            class="max-w-4xl mb-10 text-center text-4xl font-extrabold leading-none tracking-tight sm:text-7xl"
-          >
-            Servicios Integrales en
-            <span class="text-teal-accent-400">
-              <span class="text-blue-500">Transporte </span> Turístico y
-              Ejecutivo</span
-            >
-          </h2>
-          <!--<div
-            class="border-2 w-40 sm:w-30 text-center p-3 text-gray-100 hover:text-azul-500 ease-in-out delay-150 bg-transparent hover:-translate-y-1 hover:scale-110 hover:bg-gray-100 duration-300"
-          >
-            <a href="/" class="font-bold"> Leer más </a>
-          </div>-->
-        </div>
+    
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-gray-950/80 to-gray-950/40"></div>
+    
+    <!-- Hero Content -->
+    <div class="relative flex items-center justify-center h-full px-4">
+      <div class="max-w-5xl mx-auto text-center">
+        <hr class="w-24 h-1 mx-auto mb-8 bg-azul-500" />
+        <h1 class="text-4xl font-bold text-white md:text-6xl lg:text-7xl" data-aos="fade-up">
+          Servicios Integrales en
+          <span class="block mt-2 text-azul-500">
+            Transporte Turístico y Ejecutivo
+          </span>
+        </h1>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Main modal -->
-  <div
-    id="defaultModal"
-    tabindex="-1"
-    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
-  >
-    <div class="relative w-full max-w-7xl max-h-full">
-      <!-- Modal content -->
-      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-        <!-- Modal header -->
-        <div
-          class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600"
-        >
-          <h3 class="text-xl font-medium text-gray-900 dark:text-white"></h3>
-          <button
-            type="button"
-            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-            data-modal-hide="defaultModal"
-          >
-            <svg
-              class="w-3 h-3"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+  <!-- Contact Modal -->
+  <Teleport to="body">
+    <div
+      id="defaultModal"
+      tabindex="-1"
+      class="fixed inset-0 z-[100] hidden overflow-y-auto"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+        <!-- Modal Overlay -->
+        <div class="fixed inset-0 transition-opacity bg-gray-900/75 backdrop-blur-sm" data-modal-hide="defaultModal"></div>
+
+        <!-- Modal Panel -->
+        <div class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+          <div class="grid lg:grid-cols-5">
+            <!-- Modal Image Side -->
+            <div class="relative hidden lg:block lg:col-span-2">
+              <img
+                src="/src/assets/contact.jpg"
+                alt="Contacto SITT Ejecutivo"
+                class="absolute inset-0 object-cover w-full h-full"
               />
-            </svg>
-            <span class="sr-only">Close modal</span>
-          </button>
-        </div>
-        <!-- Modal body -->
-        <div class="">
-          <section class="bg-white">
-            <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-              <section
-                class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
-              >
-                <img
-                  alt="Night"
-                  src="/src/assets/contact.jpg"
-                  class="absolute inset-0 h-full w-full object-cover opacity-80"
-                />
-
-                <div class="hidden lg:relative lg:block lg:p-12">
-                  <h2
-                    class="mt-6 text-4xl font-extrabold leading-none tracking-tight text-white"
-                  >
-                    Bienvenidos a SITT Ejecutivo
-                  </h2>
-
-                  <p
-                    class="mt-4 text-base font-medium tracking-wider leading-relaxed text-white/90"
-                  >
-                    Contamos con un equipo multidisciplinario, capacitado y
-                    certificado, que domina a la perfección cada área,
-                    permitiendo ofrecer atención personalizada y de calidad a
-                    nuestros clientes.
-                  </p>
-                </div>
-              </section>
-
-              <main
-                class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
-              >
-                <div class="max-w-xl lg:max-w-3xl">
-                  <div class="mt-16 block lg:hidden">
-                    <h1
-                      class="mt-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900"
-                    >
-                      Bienvenidos a SITT Ejecutivo
-                    </h1>
-
-                    <p
-                      class="mt-4 text-base font-medium tracking-wider leading-relaxed text-gray-500"
-                    >
-                      Contamos con un equipo multidisciplinario, capacitado y
-                      certificado, que domina a la perfección cada área,
-                      permitiendo ofrecer atención personalizada y de calidad a
-                      nuestros clientes.
-                    </p>
-                  </div>
-
-                  <div role="alert" :class="isSendEmail ? '' : 'hidden'">
-                    <div
-                      :class="
-                        errorSend ? 'border-rose-700' : 'border-green-700'
-                      "
-                      class="rounded-xl shadow-2xl border-2 mt-10 border-gray-100 bg-white p-4"
-                    >
-                      <div class="flex items-start gap-4 pl-10">
-                        <div class="flex-1">
-                          <strong class="block font-medium text-gray-900">
-                            Correo electrónico.
-                          </strong>
-
-                          <p
-                            class="mt-1 text-sm text-gray-700"
-                            v-if="!errorSend"
-                          >
-                            Gracias por comunicarte con nosotros, en breve nos
-                            comunicaremos con usted. 👩‍💻📣
-                          </p>
-                          <p
-                            class="mt-1 text-sm text-gray-700"
-                            v-if="errorSend"
-                          >
-                            Se produjo un problema al enviar un correo a el
-                            contacto SITT
-                          </p>
-                        </div>
-
-                        <button
-                          @click="reset()"
-                          class="text-gray-500 transition hover:text-gray-600"
-                        >
-                          <span class="sr-only">Dismiss popup</span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="h-6 w-6"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M6 18L18 6M6 6l12 12"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <form
-                    ref="form"
-                    action="#"
-                    class="mt-8 grid grid-cols-12"
-                    @submit.prevent="sendEmail()"
-                  >
-                    <div class="flex flex-row my-10">
-                      <p class="flex items-center mr-2 sm:mr-6">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          x="0px"
-                          y="0px"
-                          width="100"
-                          height="100"
-                          viewBox="0,0,256,256"
-                          class="w-10 h-10 mr-2 sm:mr-6"
-                        >
-                          <g
-                            fill="#1e88e5"
-                            fill-rule="nonzero"
-                            stroke="none"
-                            stroke-width="1"
-                            stroke-linecap="butt"
-                            stroke-linejoin="miter"
-                            stroke-miterlimit="10"
-                            stroke-dasharray=""
-                            stroke-dashoffset="0"
-                            font-family="none"
-                            font-weight="none"
-                            font-size="none"
-                            text-anchor="none"
-                            style="mix-blend-mode: normal"
-                          >
-                            <g transform="scale(5.12,5.12)">
-                              <path
-                                d="M14,3.99023c-5.51133,0 -10,4.48867 -10,10v22c0,5.51133 4.48867,10 10,10h22c5.51133,0 10,-4.48867 10,-10v-22c0,-5.51133 -4.48867,-10 -10,-10zM18.00586,12.0332c0.628,0.027 1.20473,0.38083 1.55273,0.92383c0.396,0.618 1.01055,1.57712 1.81055,2.82813c0.73,1.141 0.78091,2.61469 0.12891,3.80469l-1.46484,2.08398c-0.396,0.564 -0.47498,1.28588 -0.20898,1.92188c0.414,0.99 1.21658,2.5115 2.64258,3.9375c1.426,1.426 2.9475,2.22858 3.9375,2.64258c0.636,0.266 1.35788,0.18702 1.92188,-0.20898l2.08398,-1.46484c1.19,-0.652 2.66369,-0.60009 3.80469,0.12891c1.251,0.8 2.21012,1.41455 2.82813,1.81055c0.543,0.348 0.89683,0.92473 0.92383,1.55273c0.154,3.564 -2.60716,5.00781 -3.41016,5.00781c-0.556,0 -7.2403,0.7597 -14.7793,-6.7793c-7.539,-7.539 -6.7793,-14.2233 -6.7793,-14.7793c0,-0.803 1.44381,-3.56416 5.00781,-3.41016z"
-                              ></path>
-                            </g>
-                          </g>
-                        </svg>
-                        <span
-                          class="text-base font-extrabold leading-none tracking-tight"
-                          >5591528674</span
-                        >
-                      </p>
-                      <p class="flex items-center mr-2 sm:mr-6">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          x="0px"
-                          y="0px"
-                          width="100"
-                          height="100"
-                          viewBox="0,0,256,256"
-                          class="w-10 h-10 mr-2 sm:mr-6"
-                        >
-                          <g
-                            fill="#1e88e5"
-                            fill-rule="nonzero"
-                            stroke="none"
-                            stroke-width="1"
-                            stroke-linecap="butt"
-                            stroke-linejoin="miter"
-                            stroke-miterlimit="10"
-                            stroke-dasharray=""
-                            stroke-dashoffset="0"
-                            font-family="none"
-                            font-weight="none"
-                            font-size="none"
-                            text-anchor="none"
-                            style="mix-blend-mode: normal"
-                          >
-                            <g transform="scale(5.12,5.12)">
-                              <path
-                                d="M14,4c-5.51133,0 -10,4.48867 -10,10v22c0,5.51133 4.48867,10 10,10h22c5.51133,0 10,-4.48867 10,-10v-22c0,-5.51133 -4.48867,-10 -10,-10zM13,16h24c0.18,0 0.34977,0.02031 0.50977,0.07031l-9.83008,9.82031c-1.48,1.48 -3.88914,1.48 -5.36914,0l-9.82031,-9.82031c0.16,-0.05 0.32977,-0.07031 0.50977,-0.07031zM11.07031,17.49023l7.51953,7.50977l-7.51953,7.50977c-0.05,-0.16 -0.07031,-0.32977 -0.07031,-0.50977v-14c0,-0.18 0.02031,-0.34977 0.07031,-0.50977zM38.92969,17.49023c0.05,0.16 0.07031,0.32977 0.07031,0.50977v14c0,0.18 -0.02031,0.34977 -0.07031,0.50977l-7.5293,-7.50977zM20,26.41016l0.89063,0.90039c1.13,1.13 2.61961,1.68945 4.09961,1.68945c1.49,0 2.96961,-0.55945 4.09961,-1.68945l0.90039,-0.90039l7.51953,7.51953c-0.16,0.05 -0.32977,0.07031 -0.50977,0.07031h-24c-0.18,0 -0.34977,-0.02031 -0.50977,-0.07031z"
-                              ></path>
-                            </g>
-                          </g>
-                        </svg>
-                        <span
-                          class="text-base font-extrabold leading-none tracking-tight"
-                          >contacto@sittejecutivo.com</span
-                        >
-                      </p>
-                    </div>
-
-                    <div class="col-span-12 mt-2">
-                      <label
-                        for="name"
-                        class="block text-lg font-extrabold leading-none tracking-tight text-gray-700"
-                      >
-                        Nombre
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        v-model="name"
-                        class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                      />
-                    </div>
-
-                    <div class="col-span-12 mt-2">
-                      <label
-                        for="email"
-                        class="block text-lg font-extrabold leading-none tracking-tight text-gray-700"
-                      >
-                        Correo electrónico
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        v-model="email"
-                        class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                      />
-                    </div>
-
-                    <div class="col-span-12 mt-2">
-                      <label
-                        for="message"
-                        class="block text-lg font-extrabold leading-none tracking-tight text-gray-700"
-                      >
-                        Mensaje
-                      </label>
-
-                      <textarea
-                        class="mt-2 w-full rounded-lg border-gray-200 align-top shadow-sm sm:text-sm"
-                        rows="4"
-                        placeholder="Mensaje ..."
-                        v-model="message"
-                        id="message"
-                        name="message"
-                      ></textarea>
-                    </div>
-
-                    <div
-                      class="col-span-6 sm:flex sm:items-center sm:gap-4 mt-6"
-                    >
-                      <button
-                        class="inline-block shrink-0 rounded-md border border-azul-600 bg-azul-600 px-12 py-3 text-lg font-extrabold leading-none tracking-tight text-white transition hover:bg-transparent hover:text-azul-600 focus:outline-none focus:ring active:text-azul-500"
-                      >
-                        Enviar
-                      </button>
-
-                      <p
-                        class="mt-4 text-lg font-extrabold leading-none tracking-tight text-gray-500"
-                        data-modal-hide="defaultModal"
-                      >
-                        Cancelar
-                      </p>
-                    </div>
-                  </form>
-                </div>
-              </main>
+              <div class="absolute inset-0 bg-gradient-to-t from-azul-900/90 to-transparent"></div>
+              <div class="absolute bottom-0 p-8 text-white">
+                <h2 class="mb-4 text-2xl font-bold">Bienvenidos a SITT Ejecutivo</h2>
+                <p class="text-sm leading-relaxed text-white/90">
+                  Contamos con un equipo multidisciplinario, capacitado y certificado, que domina a la perfección cada área, permitiendo ofrecer atención personalizada y de calidad a nuestros clientes.
+                </p>
+              </div>
             </div>
-          </section>
+
+            <!-- Modal Form Side -->
+            <div class="p-8 lg:col-span-3">
+              <!-- Mobile Header -->
+              <div class="mb-8 lg:hidden">
+                <h2 class="text-2xl font-bold text-gray-900">Bienvenidos a SITT Ejecutivo</h2>
+                <p class="mt-2 text-sm text-gray-600">
+                  Contamos con un equipo multidisciplinario, capacitado y certificado.
+                </p>
+              </div>
+
+              <!-- Alert Messages -->
+              <Transition
+                enter-active-class="transition duration-300 ease-out"
+                enter-from-class="opacity-0 -translate-y-2"
+                enter-to-class="opacity-100 translate-y-0"
+                leave-active-class="transition duration-200 ease-in"
+                leave-from-class="opacity-100 translate-y-0"
+                leave-to-class="opacity-0 -translate-y-2"
+              >
+                <div v-if="isSendEmail" class="mb-6">
+                  <div :class="errorSend ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200'" class="p-4 border rounded-lg">
+                    <div class="flex">
+                      <div class="flex-1">
+                        <p class="text-sm font-medium" :class="errorSend ? 'text-red-800' : 'text-green-800'">
+                          <span v-if="!errorSend">✓ ¡Mensaje enviado con éxito!</span>
+                          <span v-else>✗ Error al enviar el mensaje</span>
+                        </p>
+                        <p class="mt-1 text-sm" :class="errorSend ? 'text-red-600' : 'text-green-600'">
+                          <span v-if="!errorSend">Gracias por contactarnos. Te responderemos a la brevedad.</span>
+                          <span v-else>Hubo un problema al enviar tu mensaje. Por favor intenta nuevamente.</span>
+                        </p>
+                      </div>
+                      <button @click="reset" class="ml-4">
+                        <span class="sr-only">Cerrar</span>
+                        <svg class="w-5 h-5" :class="errorSend ? 'text-red-500' : 'text-green-500'" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </Transition>
+
+              <!-- Contact Info -->
+              <div class="flex flex-col gap-4 mb-8 sm:flex-row sm:gap-6">
+                <div class="flex items-center">
+                  <div class="p-2 rounded-full bg-azul-100">
+                    <svg class="w-5 h-5 text-azul-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/>
+                      <path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2z"/>
+                      <path d="M16.422 13.443c-.253-.152-.586-.152-.938.152l-2.531 2.027c-1.012-.405-2.226-1.113-3.139-2.027-.913-.913-1.621-2.126-2.027-3.139l2.027-2.531c.304-.352.304-.685.152-.938-.456-.709-1.165-2.228-1.773-2.937-.203-.253-.481-.405-.785-.405H5.204c-.38 0-.685.304-.735.684C4.317 7.439 6.071 11.5 9.28 14.708c3.208 3.208 7.268 4.963 11.442 4.811.38-.05.684-.355.684-.735V16.67c0-.304-.152-.582-.405-.785-.709-.608-2.228-1.317-2.937-1.773z"/>
+                    </svg>
+                  </div>
+                  <span class="ml-3 font-semibold text-gray-700">55 9152 8674</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="p-2 rounded-full bg-azul-100">
+                    <svg class="w-5 h-5 text-azul-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                  </div>
+                  <span class="ml-3 font-semibold text-gray-700">contacto@sittejecutivo.com</span>
+                </div>
+              </div>
+
+              <!-- Form -->
+              <form ref="form" @submit.prevent="sendEmail" class="space-y-6">
+                <div>
+                  <label for="name" class="block mb-2 text-sm font-semibold text-gray-700">Nombre completo</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    v-model="name"
+                    required
+                    class="w-full px-4 py-3 transition-colors border border-gray-300 rounded-lg focus:border-azul-500 focus:ring-1 focus:ring-azul-500"
+                    placeholder="Tu nombre"
+                  />
+                </div>
+
+                <div>
+                  <label for="email" class="block mb-2 text-sm font-semibold text-gray-700">Correo electrónico</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    v-model="email"
+                    required
+                    class="w-full px-4 py-3 transition-colors border border-gray-300 rounded-lg focus:border-azul-500 focus:ring-1 focus:ring-azul-500"
+                    placeholder="tu@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label for="message" class="block mb-2 text-sm font-semibold text-gray-700">Mensaje</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    v-model="message"
+                    required
+                    rows="4"
+                    class="w-full px-4 py-3 transition-colors border border-gray-300 rounded-lg resize-none focus:border-azul-500 focus:ring-1 focus:ring-azul-500"
+                    placeholder="¿En qué podemos ayudarte?"
+                  ></textarea>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <button
+                    type="submit"
+                    class="px-8 py-3 font-semibold text-white transition-all duration-300 rounded-lg bg-azul-600 hover:bg-azul-700 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-azul-500 focus:ring-offset-2"
+                  >
+                    Enviar mensaje
+                  </button>
+                  <button
+                    type="button"
+                    class="px-6 py-3 font-semibold text-gray-600 transition-colors hover:text-gray-900"
+                    data-modal-hide="defaultModal"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </Teleport>
 </template>
 
 <script>
 import { initFlowbite } from "flowbite";
-import { initModals } from "flowbite";
-import ScrollReveal from "scrollreveal";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
 
 export default {
+  name: "NavbarHero",
   data() {
     return {
       isMenuOpen: false,
-      scrollPosition: null,
+      scrollPosition: 0,
       name: "",
       email: "",
       message: "",
       isSendEmail: false,
       errorSend: false,
+      navItems: [
+        { label: "Transporte", href: "#Transporte" },
+        { label: "Ejecutivo", href: "#Ejecutivo" },
+        { label: "Tours", href: "#Tours" },
+        { label: "Sistema", href: "#Sistema" },
+        { label: "Nosotros", href: "#Nosotros" },
+      ],
     };
   },
   methods: {
@@ -564,32 +356,85 @@ export default {
       this.isSendEmail = false;
       this.errorSend = false;
     },
-    async sendEmail(e) {
-      let isSend = await emailjs.sendForm(
-        "service_6orqgzg",
-        "template_345ffk6",
-        this.$refs.form,
-        "NS_lrf5OzRwX5v4f-"
-      );
+    async sendEmail() {
+      this.errorSend = false;
+      this.isSendEmail = false;
 
-      this.isSendEmail = true;
-      if (isSend.status != 200) {
+      try {
+        const response = await emailjs.sendForm(
+          "service_6orqgzg",
+          "template_345ffk6",
+          this.$refs.form,
+          "NS_lrf5OzRwX5v4f-"
+        );
+
+        this.isSendEmail = true;
+        this.errorSend = response.status !== 200;
+
+        if (!this.errorSend) {
+          this.name = "";
+          this.email = "";
+          this.message = "";
+          
+          // Auto-hide success message after 5 seconds
+          setTimeout(() => {
+            this.isSendEmail = false;
+          }, 5000);
+        }
+      } catch (error) {
+        this.isSendEmail = true;
         this.errorSend = true;
+        
+        // Auto-hide error message after 5 seconds
+        setTimeout(() => {
+          this.isSendEmail = false;
+        }, 5000);
       }
-
-      // Reset form field
-      this.name = "";
-      this.email = "";
-      this.message = "";
     },
   },
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
+    this.updateScroll();
     initFlowbite();
-    initModals();
-    ScrollReveal().reveal(".nav1", { delay: 600 });
-    ScrollReveal().reveal(".heroe", { delay: 300 });
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.updateScroll);
   },
 };
 </script>
+
+<style scoped>
+/* Smooth transitions for mobile menu */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Custom scrollbar for modals */
+#defaultModal {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #e5e7eb;
+}
+
+#defaultModal::-webkit-scrollbar {
+  width: 6px;
+}
+
+#defaultModal::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+#defaultModal::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 3px;
+}
+</style>
