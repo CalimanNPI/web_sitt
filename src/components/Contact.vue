@@ -49,7 +49,7 @@
           class="relative hidden lg:block lg:col-span-2 overflow-hidden group"
         >
           <img
-            src="img/contact.jpg"
+            src="/img/contact.jpg"
             alt="Contacto SITT Ejecutivo"
             class="absolute inset-0 object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
           />
