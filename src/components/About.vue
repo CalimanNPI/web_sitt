@@ -1,176 +1,298 @@
 <template>
-  <!--about uss-->
-  <div
+  <!-- About Section -->
+  <section
     id="Nosotros"
-    class="font-sans about container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-20 md:px-10 lg:px-20 xl:max-w-5xl"
+    class="relative py-20 overflow-hidden bg-white sm:py-28"
   >
-    <div class="w-52 border-b-4 border-azul-500">
-      <p
-        data-aos="zoom-in-up"
-        class="px-8 mt-8 mb-12 text-lg font-extrabold leading-none tracking-tight uppercase text-gray-700"
-      >
-        Quiénes somos
-      </p>
-    </div>
-    <h1
-      data-aos="zoom-in-down"
-      class="text-3xl font-extrabold leading-tight tracking-tight text-gray-700 sm:text-5xl"
-    >
-      Somos una empresa 100% mexicana, especializada en
-      <span class="text-azul-400"
-        >servicio de transporte turístico y ejecutivo.</span
-      >
-    </h1>
-  </div>
+    <Separator />
 
-  <hr class="w-full my-8 border-blue-500/80" />
-
-  <div class="about mx-auto mb-20 grid grid-cols-1 gap-x-8 gap-y-16 px-4 py-16 md:px-8 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-    <div
-      class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
-    >
-      <div data-aos="zoom-in-down" class="lg:pr-4 pl-4">
-        <div class="lg:max-w-lg">
-          <h1
-            class="mt-2 text-6xl font-extrabold leading-none tracking-tight text-azul-500"
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="inline-block">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-0.5 bg-azul-500"></div>
+            <span
+              class="text-sm font-bold tracking-widest uppercase text-azul-600"
+              >Sobre nosotros</span
+            >
+            <div class="w-12 h-0.5 bg-azul-500"></div>
+          </div>
+          <h2
+            class="text-4xl font-black tracking-tight text-gray-900 sm:text-5xl lg:text-6xl"
           >
-            Nosotros
-          </h1>
-          <p
-            class="mt-6 text-lg font-medium tracking-wider leading-relaxed text-gray-700"
-          >
-            Con 28 años de experiencia, en los que día a día nos comprometemos
-            en ofrecer una gama completa de opciones para resolver los desafíos
-            de seguridad, movilidad y puntualidad de nuestros clientes:
+            Somos una empresa
+            <span class="block text-azul-600">100% mexicana</span>
+          </h2>
+          <p class="max-w-2xl mx-auto mt-6 text-xl font-medium text-gray-600">
+            Especializada en servicio de transporte turístico y ejecutivo con 28
+            años de experiencia
           </p>
         </div>
       </div>
-    </div>
-    <div data-aos="zoom-in-down" class="mx-auto w-full max-w-md lg:sticky lg:top-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-      <img
-        class="w-full rounded-xl bg-gray-900 object-cover shadow-xl ring-1 ring-gray-400/10"
-        src="/src/assets/about.jpeg"
-        alt="Equipo de SITT"
-      />
-    </div>
 
-    <div
-      class="pl-4 lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
-    >
-      <div class="lg:pr-4">
-        <div class="max-w-xl lg:max-w-lg">
-          <ul role="list" class="mt-8 space-y-8 text-gray-600">
-            <li class="flex items-center gap-x-3" data-aos="zoom-in-down">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 300 300"
-                class="mt-1 h-14 w-14 flex-none text-azul-500"
-              >
-                <path
-                  fill="#1E88E5"
-                  d="M224.49 197.82c-25.8-11.64-51.65-23.18-77.4-34.92-13.9-6.34-32.02-15.07-39.07-29.66 4.38.79 8.82 1.3 13.26 1.55 12.26.69 25.01-2.38 29.18-15.31 3.41-10.56-.88-22.85-10.74-28.23-10.49-5.73-24.41-3.62-32.96 4.63-7 6.75-10.2 16.72-9.65 26.36-3.68-1.19-6.84-2.41-9.08-3.44-23.99-11.06-41.64-34.78-38.98-61.99.5-5.12-7.5-5.09-8 0-2.76 28.22 14.85 54.36 39.32 67.11 5.86 3.05 12.03 5.43 18.37 7.19 3.59 11.33 12.19 20.06 21.86 26.63 13.67 9.3 29.6 15.28 44.59 22.05l55.26 24.93c4.66 2.1 8.73-4.79 4.04-6.91zM105.06 121.5c-.46-10.87 5.27-22.11 16.42-24.86 9.83-2.43 20.82 2.51 22.04 13.32 2.24 19.81-20.27 18.48-38.15 14.61-.15-1-.26-2.02-.3-3.07z"
-                ></path>
-                <path
-                  fill="#1E88E5"
-                  d="M258.06 206.7a805.18 805.18 0 01-47.48-48.18c-3.47-3.82-9.11 1.85-5.66 5.66a806.35 806.35 0 0042.69 43.65c-21.36 7.36-41.45 17.93-59.56 31.5-4.07 3.05-.09 10 4.04 6.91 19.42-14.55 41.03-25.67 64.21-32.86 2.77-.86 4.04-4.56 1.77-6.69z"
-                ></path>
-              </svg>
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
+        <!-- Left Column - Stats & Values -->
+        <div class="space-y-10" data-aos="fade-right" data-aos-delay="200">
+          <!-- Experience Badge -->
+          <div
+            class="inline-flex items-center gap-4 px-6 py-3 bg-azul-50 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:bg-azul-100/70"
+          >
+            <span class="text-4xl font-black text-azul-600">28</span>
+            <span class="text-lg font-semibold text-gray-700"
+              >años de experiencia</span
+            >
+          </div>
 
-              <span
-                ><strong
-                  class="text-xl font-extrabold leading-none tracking-tight text-gray-900"
-                  >Autos confortables.</strong
-                >
-              </span>
-            </li>
-            <li class="flex items-center gap-x-3" data-aos="zoom-in-down">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 300 300"
-                class="h-14 w-14 flex-none text-azul-500"
-              >
-                <path
-                  fill="#1E88E5"
-                  d="M224.49 197.82c-25.8-11.64-51.65-23.18-77.4-34.92-13.9-6.34-32.02-15.07-39.07-29.66 4.38.79 8.82 1.3 13.26 1.55 12.26.69 25.01-2.38 29.18-15.31 3.41-10.56-.88-22.85-10.74-28.23-10.49-5.73-24.41-3.62-32.96 4.63-7 6.75-10.2 16.72-9.65 26.36-3.68-1.19-6.84-2.41-9.08-3.44-23.99-11.06-41.64-34.78-38.98-61.99.5-5.12-7.5-5.09-8 0-2.76 28.22 14.85 54.36 39.32 67.11 5.86 3.05 12.03 5.43 18.37 7.19 3.59 11.33 12.19 20.06 21.86 26.63 13.67 9.3 29.6 15.28 44.59 22.05l55.26 24.93c4.66 2.1 8.73-4.79 4.04-6.91zM105.06 121.5c-.46-10.87 5.27-22.11 16.42-24.86 9.83-2.43 20.82 2.51 22.04 13.32 2.24 19.81-20.27 18.48-38.15 14.61-.15-1-.26-2.02-.3-3.07z"
-                ></path>
-                <path
-                  fill="#1E88E5"
-                  d="M258.06 206.7a805.18 805.18 0 01-47.48-48.18c-3.47-3.82-9.11 1.85-5.66 5.66a806.35 806.35 0 0042.69 43.65c-21.36 7.36-41.45 17.93-59.56 31.5-4.07 3.05-.09 10 4.04 6.91 19.42-14.55 41.03-25.67 64.21-32.86 2.77-.86 4.04-4.56 1.77-6.69z"
-                ></path>
-              </svg>
+          <!-- Values List -->
+          <div class="space-y-8">
+            <h3 class="text-2xl font-bold text-gray-900">Nuestros valores</h3>
 
-              <span
-                ><strong
-                  class="text-xl font-extrabold leading-none tracking-tight text-gray-900"
-                  >SUVs versátiles.</strong
-                >
-              </span>
-            </li>
-            <li class="flex items-center gap-x-3" data-aos="zoom-in-down">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 300 300"
-                class="h-14 w-14 flex-none text-azul-500"
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div
+                v-for="value in values"
+                :key="value.title"
+                class="group flex items-start gap-4 p-3 rounded-xl transition-all duration-300 hover:bg-azul-50 hover:-translate-y-1"
+                data-aos="fade-up"
+                data-aos-delay="300"
               >
-                <path
-                  fill="#1E88E5"
-                  d="M224.49 197.82c-25.8-11.64-51.65-23.18-77.4-34.92-13.9-6.34-32.02-15.07-39.07-29.66 4.38.79 8.82 1.3 13.26 1.55 12.26.69 25.01-2.38 29.18-15.31 3.41-10.56-.88-22.85-10.74-28.23-10.49-5.73-24.41-3.62-32.96 4.63-7 6.75-10.2 16.72-9.65 26.36-3.68-1.19-6.84-2.41-9.08-3.44-23.99-11.06-41.64-34.78-38.98-61.99.5-5.12-7.5-5.09-8 0-2.76 28.22 14.85 54.36 39.32 67.11 5.86 3.05 12.03 5.43 18.37 7.19 3.59 11.33 12.19 20.06 21.86 26.63 13.67 9.3 29.6 15.28 44.59 22.05l55.26 24.93c4.66 2.1 8.73-4.79 4.04-6.91zM105.06 121.5c-.46-10.87 5.27-22.11 16.42-24.86 9.83-2.43 20.82 2.51 22.04 13.32 2.24 19.81-20.27 18.48-38.15 14.61-.15-1-.26-2.02-.3-3.07z"
-                ></path>
-                <path
-                  fill="#1E88E5"
-                  d="M258.06 206.7a805.18 805.18 0 01-47.48-48.18c-3.47-3.82-9.11 1.85-5.66 5.66a806.35 806.35 0 0042.69 43.65c-21.36 7.36-41.45 17.93-59.56 31.5-4.07 3.05-.09 10 4.04 6.91 19.42-14.55 41.03-25.67 64.21-32.86 2.77-.86 4.04-4.56 1.77-6.69z"
-                ></path>
-              </svg>
-              <span
-                ><strong
-                  class="text-xl font-extrabold leading-none tracking-tight text-gray-900"
-                  >Vans ejecutivas Mercedes-Benz.</strong
+                <div class="flex-shrink-0">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 rounded-xl bg-azul-100 transition-all duration-300 group-hover:bg-azul-200 group-hover:scale-110"
+                  >
+                    <Icon :name="value.icon" class="w-6 h-6 text-azul-600" />
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900">
+                    {{ value.title }}
+                  </h4>
+                  <p class="mt-1 text-sm text-gray-600">
+                    {{ value.description }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mission & Vision Cards -->
+          <div class="grid gap-6 pt-6 sm:grid-cols-2">
+            <div
+              class="group p-6 bg-gradient-to-br from-azul-50 to-white rounded-2xl border border-azul-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div
+                class="w-12 h-12 mb-4 rounded-xl bg-azul-600 flex items-center justify-center"
+              >
+                <Icon name="eye" class="w-6 h-6 text-white" />
+              </div>
+              <h4 class="mb-2 text-xl font-bold text-gray-900">
+                Nuestra Visión
+              </h4>
+              <p class="text-gray-600 leading-relaxed">
+                Consolidarnos como empresa líder en transportación integral con
+                personal capacitado y unidades en óptimas condiciones.
+              </p>
+            </div>
+
+            <div
+              class="group p-6 bg-gradient-to-br from-azul-50 to-white rounded-2xl border border-azul-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div
+                class="w-12 h-12 mb-4 rounded-xl bg-azul-600 flex items-center justify-center"
+              >
+                <Icon name="bookmark" class="w-6 h-6 text-white" />
+              </div>
+              <h4 class="mb-2 text-xl font-bold text-gray-900">
+                Nuestra Misión
+              </h4>
+              <p class="text-gray-600 leading-relaxed">
+                Ofrecer seguridad, comunicación, eficiencia, puntualidad y
+                confort en cada traslado, generando relaciones comerciales
+                duraderas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Image & Fleet -->
+        <div class="space-y-8" data-aos="fade-left" data-aos-delay="200">
+          <!-- Main Image with decorative elements -->
+          <div class="relative group">
+            <div
+              class="absolute -top-4 -left-4 w-24 h-24 bg-azul-200 rounded-2xl -z-10"
+            ></div>
+            <div
+              class="absolute -bottom-4 -right-4 w-32 h-32 bg-azul-300 rounded-2xl -z-10"
+            ></div>
+
+            <div
+              class="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/10"
+            >
+              <img
+                class="w-full transition-transform duration-700 group-hover:scale-105"
+                src="/src/assets/about.jpeg"
+                alt="Equipo de SITT Ejecutivo"
+              />
+            </div>
+
+            <!-- Floating Experience Card -->
+            <div
+              class="floating-card absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-4 max-w-[200px] border border-gray-100 transition-all duration-300 hover:shadow-2xl"
+            >
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-10 h-10 rounded-lg bg-azul-100 flex items-center justify-center"
                 >
-              </span>
-            </li>
-          </ul>
-          <h2
-            class="mt-12 text-2xl font-extrabold leading-none tracking-tight text-gray-900"
-          >
-            Nuestra <span class="text-azul-500">Visión</span>
-          </h2>
-          <p
-            class="mt-6 text-lg font-medium tracking-wider leading-relaxed text-gray-700"
-            data-aos="zoom-in-down"
-          >
-            Consolidarnos como empresa líder en transportación integral con
-            personal capacitado y unidades en óptimas condiciones, que nos
-            permita ofrecer una experiencia única en cada trayecto.
-          </p>
-          <h2
-            class="mt-12 text-2xl font-extrabold leading-none tracking-tight text-gray-900"
-          >
-            Nuestra <span class="text-azul-500">Misión</span>
-          </h2>
-          <p
-            class="mt-6 text-lg font-medium tracking-wider leading-relaxed text-gray-700"
-            data-aos="zoom-in-down"
-          >
-            Nos esmeramos en ofrecer a nuestros clientes y usuarios seguridad,
-            comunicación, eficiencia, puntualidad y confort en cada traslado. Al
-            mismo tiempo, generar relaciones comerciales duraderas.
-          </p>
+                  <Icon name="check-circle" class="w-5 h-5 text-azul-600" />
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500">Más de</p>
+                  <p class="text-xl font-black text-gray-900">10,000+</p>
+                  <p class="text-xs text-gray-500">viajes realizados</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fleet Features -->
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">Nuestra Flota</h3>
+
+            <div class="grid gap-4">
+              <div
+                v-for="(vehicle, index) in fleet"
+                :key="vehicle.name"
+                class="group flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                data-aos="fade-up"
+                :data-aos-delay="600 + index * 100"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-azul-50 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-azul-100 group-hover:scale-105"
+                >
+                  <Icon
+                    :name="vehicle.icon"
+                    class="w-6 h-6 text-azul-600 transition-transform duration-300 group-hover:rotate-6"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900">{{ vehicle.name }}</h4>
+                  <p class="text-sm text-gray-600">{{ vehicle.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics Bar -->
+      <div
+        class="grid grid-cols-2 gap-4 mt-20 sm:grid-cols-4"
+        data-aos="fade-up"
+        data-aos-delay="700"
+      >
+        <div
+          v-for="stat in statistics"
+          :key="stat.label"
+          class="rounded-xl py-4 transition-all duration-300 hover:bg-azul-50 hover:-translate-y-1"
+        >
+          <div class="text-3xl font-black text-azul-600">{{ stat.value }}</div>
+          <div class="mt-1 text-sm font-medium text-gray-600">
+            {{ stat.label }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <hr class="w-full my-8 border-blue-500/80" />
+  </section>
 </template>
 
 <script>
-import ScrollReveal from "scrollreveal";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
+import Icon from "./Icon.vue";
+import Separator from "./Separator.vue";
+
 export default {
+  name: "AboutSection",
+  components: {
+    Icon,
+    Separator,
+  },
+  data() {
+    return {
+      values: [
+        {
+          title: "Seguridad",
+          description: "Compromiso total con tu bienestar en cada viaje",
+          icon: "shield-icon",
+        },
+        {
+          title: "Puntualidad",
+          description: "Respetamos tu tiempo con llegadas precisas",
+          icon: "clock-icon",
+        },
+        {
+          title: "Confort",
+          description: "Unidades de lujo para tu comodidad",
+          icon: "car-icon",
+        },
+        {
+          title: "Experiencia",
+          description: "28 años de servicio de excelencia",
+          icon: "star-icon",
+        },
+      ],
+      fleet: [
+        {
+          name: "Autos Confortables",
+          description: "Sedanes de lujo para viajes ejecutivos",
+          icon: "car",
+        },
+        {
+          name: "SUVs Versátiles",
+          description: "Espacio y comodidad para grupos pequeños",
+          icon: "users",
+        },
+        {
+          name: "Vans Ejecutivas",
+          description: "Mercedes-Benz para viajes grupales",
+          icon: "check-circle",
+        },
+      ],
+      statistics: [
+        { value: "28+", label: "Años de experiencia" },
+        { value: "10k+", label: "Viajes realizados" },
+        { value: "100%", label: "Clientes satisfechos" },
+        { value: "24/7", label: "Disponibilidad" },
+      ],
+    };
+  },
   mounted() {
-    ScrollReveal().reveal(".about", { delay: 500 });
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
   },
 };
 </script>
+
+<style scoped>
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating-card {
+  animation: float 3s ease-in-out infinite;
+}
+</style>

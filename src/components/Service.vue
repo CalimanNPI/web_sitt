@@ -1,168 +1,210 @@
+<template>
+  <section id="Ejecutivo" class="relative py-20 overflow-hidden bg-white">
+    <!-- Background Pattern -->
+    <Separator />
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Servicio Ejecutivo -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
+        <div data-aos="fade-right">
+          <div class="relative">
+            <div
+              class="absolute -top-10 -left-10 text-8xl font-black text-azul-100/30 -z-10"
+            >
+              01
+            </div>
+            <span
+              class="inline-flex items-center px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase rounded-full text-azul-600 bg-azul-50"
+              >Servicio premium</span
+            >
+            <h2 class="text-5xl md:text-6xl font-black mb-6">
+              <span class="text-gray-900">Servicio</span>
+              <span class="block text-azul-600">Ejecutivo</span>
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+              Comprometidos en ofrecer una gama completa de opciones para
+              resolver los desafíos de seguridad, movilidad y puntualidad de
+              nuestros clientes.
+            </p>
+
+            <div class="mb-6">
+              <h3
+                class="text-sm font-bold uppercase tracking-wider text-azul-600 mb-4"
+              >
+                Características
+              </h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div
+                  v-for="(feature, index) in executiveFeatures"
+                  :key="index"
+                  class="group flex items-center gap-3 p-3 bg-gray-50 rounded-xl transition-all duration-300 hover:bg-azul-50 hover:-translate-y-1 hover:shadow-md"
+                >
+                  <div
+                    class="w-10 h-10 rounded-lg bg-azul-100 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-azul-200 group-hover:scale-105"
+                  >
+                    <Icon
+                      :name="feature.icon"
+                      class="w-6 h-6 text-azul-600 transition-transform duration-300 group-hover:rotate-6"
+                    />
+                  </div>
+                  <span class="text-sm font-medium text-gray-700">{{
+                    feature.text
+                  }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group" data-aos="fade-left">
+          <div
+            class="absolute -top-4 -right-4 w-32 h-32 bg-azul-200 rounded-2xl -z-10"
+          ></div>
+          <div
+            class="absolute -bottom-4 -left-4 w-32 h-32 bg-azul-300 rounded-2xl -z-10"
+          ></div>
+
+          <div
+            class="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/10"
+          >
+            <img
+              src="/src/assets/flotilla/img_service.jpeg"
+              alt="Servicio ejecutivo"
+              class="w-full transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
+
+          <div
+            class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-4 transition-all duration-300 group-hover:shadow-2xl group-hover:-translate-y-1"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-12 h-12 rounded-lg bg-azul-100 flex items-center justify-center"
+              >
+                <Icon name="check-circle" class="w-6 h-6 text-azul-600" />
+              </div>
+              <div>
+                <p class="text-xs text-gray-500">Disponibilidad</p>
+                <p class="text-sm font-bold text-gray-900">24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Servicio Turístico -->
+      <div
+        id="Tours"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <div class="order-2 lg:order-1" data-aos="fade-right">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="col-span-2 overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="/src/assets/tour1.jpeg"
+                alt="Tour 1"
+                class="w-full h-64 object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="/src/assets/tour2.jpg"
+                alt="Tour 2"
+                class="w-full h-48 object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="/src/assets/tour3.jpg"
+                alt="Tour 3"
+                class="w-full h-48 object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2" data-aos="fade-left">
+          <div class="relative">
+            <div
+              class="absolute -top-10 -left-10 text-8xl font-black text-azul-100/30 -z-10"
+            >
+              02
+            </div>
+            <h2 class="text-5xl md:text-6xl font-black mb-6">
+              <span class="text-gray-900">Servicio</span>
+              <span class="block text-azul-600">Turístico</span>
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+              Descubre mundos nuevos y crea recuerdos inolvidables en cada
+              viaje. Con nosotros, tu próxima aventura está a un clic de
+              distancia.
+            </p>
+
+            <div class="space-y-6">
+              <div
+                v-for="(service, index) in tourServices"
+                :key="index"
+                class="p-4 bg-gray-50 rounded-xl transition-all duration-300 hover:bg-azul-50 hover:-translate-y-1 hover:shadow-md"
+              >
+                <h3 class="font-bold text-gray-900 mb-2">
+                  {{ service.title }}
+                </h3>
+                <p class="text-sm text-gray-600">{{ service.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
 <script>
-import ScrollReveal from "scrollreveal";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
+import Icon from "./Icon.vue";
+import Separator from "./Separator.vue";
+
 export default {
+  name: "ServiceSection",
+  components: {
+    Icon,
+    Separator,
+  },
+  data() {
+    return {
+      executiveFeatures: [
+        { text: "Meet & greet Transfer", icon: "users" },
+        { text: "Drop off", icon: "arrow-down" },
+        { text: "Door to door", icon: "home" },
+        { text: "Traslados foráneos", icon: "route" },
+        { text: "Servicio por horas", icon: "clock" },
+        { text: "Servicio a disposición", icon: "briefcase" },
+      ],
+      tourServices: [
+        {
+          title: "Tours guiados",
+          description:
+            "Explora bellos museos, zonas arqueológicas, calles, colonias y sus maravillosas ciudades con grandes historias por descubrir.",
+        },
+        {
+          title: "Turismo (cultural, ecológico, religioso, extremo y aventura)",
+          description:
+            "Atrévete a conocer sus costumbres ancestrales, historia, su exquisita gastronomía.",
+        },
+        {
+          title: "Guías turísticos (inglés, francés, italiano, alemán)",
+          description:
+            "Todos nuestros Guías de Turistas están acreditados por la Secretaría de Turismo de México.",
+        },
+      ],
+    };
+  },
   mounted() {
-    ScrollReveal().reveal(".services", { delay: 500 });
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
   },
 };
 </script>
-
-<template>
-  <div id="Ejecutivo"
-    class="relative font-sans mb-20 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-    <div class="absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0">
-      <svg viewBox="0 0 88 88" class="w-full  text-blue-500/20">
-        <circle fill="currentColor" cx="44" cy="44" r="15.5"></circle>
-        <circle fill-opacity="0.2" fill="currentColor" cx="44" cy="44" r="44"></circle>
-        <circle fill-opacity="0.2" fill="currentColor" cx="44" cy="44" r="37.5"></circle>
-        <circle fill-opacity="0.3" fill="currentColor" cx="44" cy="44" r="29.5"></circle>
-        <circle fill-opacity="0.3" fill="currentColor" cx="44" cy="44" r="22.5"></circle>
-      </svg>
-    </div>
-    <div class="relative grid gap-5 row-gap-10 lg:grid-cols-2">
-      <div data-aos="zoom-in-down" class="flex flex-col justify-center">
-        <div class="max-w-xl mb-6">
-          <h2 class="max-w-lg mb-6 text-5xl font-extrabold leading-none tracking-tight text-blue-500 ">
-        
-
-              <span class="relative inline-block">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"
-            class="absolute top-2 left-0 z-0 hidden w-32 -mt-20 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-20 sm:block">
-            <path fill="#111827" d="M19.38 16.87H179.17V176.66H19.38z"></path>
-            <path fill="#1E88E5" d="M114.44 115.5H233.79V234.85H114.44z"></path>
-            <path fill="#a5cff5" d="M187.8 184.18H279.79V276.17H187.8z"></path>
-          </svg>
-          <span class="relative text-gray-900">Servicio</span></span> Ejecutivo
-          </h2>
-          <p class="text-lg font-medium tracking-wider leading-relaxed text-gray-700">
-            Comprometidos en ofrecer una gama completa de opciones para resolver
-            los desafíos de seguridad, movilidad y puntualidad de nuestros
-            clientes. <br><br> Contando con los siguientes servicios:
-          </p>
-        </div>
-        <p class="mb-4 text-lg font-extrabold tracking-wider leading-relaxed text-gray-700 uppercase">
-          Características
-        </p>
-        <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0 text-base font-extrabold tracking-wider leading-relaxed text-gray-700 uppercase">
-          <ul class="space-y-3 ">
-            <li class="flex items-center" data-aos="zoom-in-left">
-              <span class="mr-1">
-                <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=rGzjKLN0kn3O&format=png&color=1e88e5"
-                  alt="wallmount-camera" />
-              </span>
-              Meet & greet Transfer.
-            </li>
-            <li class="flex items-center" data-aos="zoom-in-left">
-              <span class="mr-1">
-                <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=ZX1aN99PDj4E&format=png&color=1e88e5"
-                  alt="wallmount-camera" />
-              </span>
-              Drop off.
-            </li>
-            <li class="flex items-center" data-aos="zoom-in-left">
-              <span class="mr-1">
-                <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=ampvNvsTTwqT&format=png&color=1e88e5"
-                  alt="wallmount-camera" />
-              </span>
-              Door to door.
-            </li>
-          </ul>
-          <ul class="space-y-3">
-            <li class="flex items-center" data-aos="zoom-in-left">
-              <span class="mr-1">
-                <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=8_YULh6oHPbc&format=png&color=1e88e5"
-                  alt="wallmount-camera" />
-              </span>
-              Traslados foráneos.
-            </li>
-            <li class="flex items-center" data-aos="zoom-in-left">
-              <span class="mr-1">
-                <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=fZkUxrxLApKy&format=png&color=1e88e5"
-                  alt="wallmount-camera" />
-              </span>
-              Servicio por horas.
-            </li>
-            <li class="flex items-center" data-aos="zoom-in-left">
-              <span class="mr-1">
-                <img class="w-10 h-10" src="https://img.icons8.com/?size=100&id=67447&format=png&color=1e88e5"
-                  alt="wallmount-camera" />
-              </span>
-              Servicio a disposición.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <img data-aos="zoom-in-down" class="object-contain w-full rounded cursor-pointer"
-          src="/src/assets/flotilla/img_service.jpeg" alt="Servicio ejecutivo" />
-      </div>
-    </div>
-  </div>
-
-  <!--tour -->
-  <div id="Tours"
-    class="services font-sans px-4 py-16 mb-20 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-    <div data-aos="zoom-in-down" class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-
-      <h2 class="max-w-lg mb-6 text-5xl font-extrabold leading-none tracking-tight text-blue-500  md:mx-auto">
-        <span class="relative inline-block">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"
-            class="absolute top-2 left-0 z-0 hidden w-32 -mt-20 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-20 sm:block">
-            <path fill="#111827" d="M19.38 16.87H179.17V176.66H19.38z"></path>
-            <path fill="#1E88E5" d="M114.44 115.5H233.79V234.85H114.44z"></path>
-            <path fill="#a5cff5" d="M187.8 184.18H279.79V276.17H187.8z"></path>
-          </svg>
-          <span class="relative text-gray-900">Servicio</span></span> Turístico
-      </h2>
-      <p class="text-lg font-medium tracking-wider leading-relaxed text-gray-700 z-20">
-        Descubre mundos nuevos y crea recuerdos inolvidables en cada viaje. Con nosotros, tu próxima aventura está a un
-        clic de distancia.
-      </p>
-    </div>
-    <div class="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto" >
-      <div class="grid grid-cols-2 gap-5" >
-        <img 
-          class="object-cover w-full h-56 col-span-2 rounded shadow-lg transition duration-200 group-hover:scale-110"
-          src="/src/assets/tour1.jpeg" alt="" />
-        <img 
-          class="object-cover w-full h-48 rounded shadow-lg transition duration-200 group-hover:scale-110"
-          src="/src/assets/tour2.jpg" alt="" />
-        <img 
-          class="object-cover w-full h-48 rounded shadow-lg transition duration-200 group-hover:scale-110"
-          src="/src/assets/tour3.jpg" alt="" />
-      </div>
-      <div class="flex flex-col justify-center">
-        <div data-aos="zoom-in-down" class="pb-4 mb-4 border-b">
-          <h6 class="mb-2 text-lg font-extrabold tracking-wider leading-relaxed text-gray-700 uppercase">
-            Tours guiados
-          </h6>
-          <p class="text-lg font-medium tracking-wider leading-relaxed text-gray-700">
-            Explora bellos museos, zonas arqueológicas, calles, colonias y sus
-            maravillosas ciudades con grandes historias por descubrir.
-          </p>
-        </div>
-        <div data-aos="zoom-in-down" class="pb-4 mb-4 border-b">
-          <h6 class="mb-2 text-lg font-extrabold tracking-wider leading-relaxed text-gray-700 uppercase">
-            Turismo (cultural, ecológico, religioso, extremo y aventura)
-          </h6>
-          <p class="text-lg font-medium tracking-wider leading-relaxed text-gray-700">
-            Atrévete a conocer sus costumbres ancestrales, historia, su
-            exquisita gastronomía.
-          </p>
-        </div>
-        <div data-aos="zoom-in-down">
-          <h6 class="mb-2 text-lg font-extrabold tracking-wider leading-relaxed text-gray-700 uppercase">
-            Guías turísticos (inglés, francés, italiano, alemán)
-          </h6>
-            <p class="text-lg font-medium tracking-wider leading-relaxed text-gray-700">
-            Todos nuestros Guías de Turistas están acreditados por la Secretaría
-            de Turismo de México.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
