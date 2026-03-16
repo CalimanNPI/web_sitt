@@ -39,7 +39,7 @@
                 class="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/10"
               >
                 <img
-                  src="/src/assets/flotilla/autos.jpeg"
+                  src="img/autos.jpeg"
                   alt="Transporte empresarial"
                   class="w-full transition-transform duration-700 group-hover:scale-105"
                 />
@@ -157,7 +157,7 @@
                 class="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/10"
               >
                 <img
-                  src="/src/assets/flotilla/autos3.jpeg"
+                  src="img/autos3.jpeg"
                   alt="SUV ejecutivas"
                   class="w-full transition-transform duration-700 group-hover:scale-105"
                 />
@@ -195,7 +195,7 @@
                 class="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/10"
               >
                 <img
-                  src="/src/assets/flotilla/autos2.jpeg"
+                  src="img/autos2.jpeg"
                   alt="Mercedes-Benz Sprinter"
                   class="w-full transition-transform duration-700 group-hover:scale-105"
                 />

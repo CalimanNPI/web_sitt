@@ -68,7 +68,7 @@
             class="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/10"
           >
             <img
-              src="/src/assets/flotilla/img_service.jpeg"
+              src="img/img_service.jpeg"
               alt="Servicio ejecutivo"
               class="w-full transition-transform duration-700 group-hover:scale-105"
             />
@@ -100,21 +100,21 @@
           <div class="grid grid-cols-2 gap-4">
             <div class="col-span-2 overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/src/assets/tour1.jpeg"
+                src="img/tour1.jpeg"
                 alt="Tour 1"
                 class="w-full h-64 object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div class="overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/src/assets/tour2.jpg"
+                src="img/tour2.jpg"
                 alt="Tour 2"
                 class="w-full h-48 object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div class="overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/src/assets/tour3.jpg"
+                src="img/tour3.jpg"
                 alt="Tour 3"
                 class="w-full h-48 object-cover transition-transform duration-700 hover:scale-105"
               />

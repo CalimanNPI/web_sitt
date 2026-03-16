@@ -61,11 +61,11 @@ export default {
   data() {
     return {
       clients: [
-        { name: "J&J", logo: "/src/assets/icons/J_J.png" },
-        { name: "Janssen", logo: "/src/assets/icons/JANSSEN.png" },
-        { name: "Lilly", logo: "/src/assets/icons/LILLY.png" },
-        { name: "Parexel", logo: "/src/assets/icons/PAREXEL.png" },
-        { name: "Pepsi", logo: "/src/assets/icons/PEPSI.png" }
+        { name: "J&J", logo: "icons/J_J.png" },
+        { name: "Janssen", logo: "icons/JANSSEN.png" },
+        { name: "Lilly", logo: "icons/LILLY.png" },
+        { name: "Parexel", logo: "icons/PAREXEL.png" },
+        { name: "Pepsi", logo: "icons/PEPSI.png" }
       ],
       trustIndicators: [
         { value: "2000+", label: "Clientes satisfechos", icon: "users" },

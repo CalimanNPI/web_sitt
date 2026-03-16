@@ -7,7 +7,7 @@
         <!-- Brand Column -->
         <div class="lg:col-span-4">
           <img 
-            src="/src/assets/logos/logo_ba.png" 
+            src="logo/logo_ba.png" 
             alt="SITT Ejecutivo" 
             class="h-16 mb-6"
           />

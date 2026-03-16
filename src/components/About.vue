@@ -135,7 +135,7 @@
             >
               <img
                 class="w-full transition-transform duration-700 group-hover:scale-105"
-                src="/src/assets/about.jpeg"
+                src="img/about.jpeg"
                 alt="Equipo de SITT Ejecutivo"
               />
             </div>

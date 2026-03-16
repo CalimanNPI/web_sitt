@@ -2,7 +2,7 @@
   <section id="Sistema" class="relative py-24 overflow-hidden">
     <!-- Background Image with Overlay -->
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-         :style="{ backgroundImage: `url('/src/assets/sistema-background.jpg')` }">
+         :style="{ backgroundImage: `url('img/sistema-background.jpg')` }">
       <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/80"></div>
     </div>
 
