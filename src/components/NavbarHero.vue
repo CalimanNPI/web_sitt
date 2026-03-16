@@ -172,8 +172,8 @@ export default {
     logoSrc() {
       // Usar siempre el logo oscuro cuando hay scroll, claro cuando no
       return this.scrollPosition > 50 
-        ? "/src/assets/logos/logo_na.png" 
-        : "/src/assets/logos/logo_ba.png";
+        ? "/assets/logos/logo_na.png" 
+        : "/assets/logos/logo_ba.png";
     }
   },
   methods: {
