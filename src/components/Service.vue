@@ -68,7 +68,7 @@
             class="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/10"
           >
             <img
-              src="img/img_service.jpeg"
+              src="/img/img_service.jpeg"
               alt="Servicio ejecutivo"
               class="w-full transition-transform duration-700 group-hover:scale-105"
             />
