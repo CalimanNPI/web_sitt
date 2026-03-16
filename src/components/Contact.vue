@@ -294,6 +294,7 @@
                   v-model="formData[field.name]"
                   :required="field.required"
                   :rows="field.rows"
+                  :maxlength="field.maxlength"
                   :placeholder="field.placeholder"
                   class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl transition-all duration-300 focus:border-azul-500 focus:ring-2 focus:ring-azul-200 focus:outline-none hover:border-azul-300 group-hover:shadow-lg"
                   @focus="handleFieldFocus(field.name)"
@@ -385,6 +386,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
+import { sanitizeEmail, sanitizeText } from "@/utils/security";
 import Icon from "./Icon.vue";
 import Separator from "./Separator.vue";
 export default {
@@ -426,6 +428,7 @@ export default {
           type: "text",
           icon: "user",
           placeholder: "Tu nombre",
+          maxlength: 120,
           required: true,
         },
         {
@@ -434,6 +437,7 @@ export default {
           type: "email",
           icon: "mail",
           placeholder: "tu@email.com",
+          maxlength: 254,
           required: true,
         },
         {
@@ -442,6 +446,7 @@ export default {
           type: "textarea",
           icon: "message",
           placeholder: "¿En qué podemos ayudarte?",
+          maxlength: 2000,
           rows: 4,
           required: true,
         },
@@ -470,16 +475,41 @@ export default {
       this.focusedField = null;
     },
 
+    getSafeFormData() {
+      return {
+        name: sanitizeText(this.formData.name, { maxLength: 120 }),
+        email: sanitizeEmail(this.formData.email),
+        message: sanitizeText(this.formData.message, {
+          maxLength: 2000,
+          preserveNewlines: true,
+        }),
+      };
+    },
+
     async sendEmail() {
       this.errorSend = false;
       this.isSendEmail = false;
       this.isSubmitting = true;
 
+      const safeFormData = this.getSafeFormData();
+
+      if (!safeFormData.name || !safeFormData.email || !safeFormData.message) {
+        this.isSendEmail = true;
+        this.errorSend = true;
+        this.isSubmitting = false;
+
+        setTimeout(() => {
+          this.isSendEmail = false;
+        }, 5000);
+
+        return;
+      }
+
       try {
-        const response = await emailjs.sendForm(
+        const response = await emailjs.send(
           "service_6orqgzg",
           "template_345ffk6",
-          this.$refs.form,
+          safeFormData,
           "NS_lrf5OzRwX5v4f-",
         );
 

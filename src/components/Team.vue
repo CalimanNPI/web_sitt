@@ -29,7 +29,7 @@
 
       <!-- Team Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div v-for="(member, index) in teamMembers" :key="member.name"
+        <div v-for="(member, index) in safeTeamMembers" :key="member.name"
              class="group relative" data-aos="fade-up" :data-aos-delay="200 + (index * 100)">
           <div class="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
             <img
@@ -82,6 +82,7 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { sanitizeAssetUrl, sanitizeUrl } from "@/utils/security";
 import Icon from "./Icon.vue";
 
 export default {
@@ -134,6 +135,18 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    safeTeamMembers() {
+      return this.teamMembers.map((member) => ({
+        ...member,
+        image: sanitizeAssetUrl(member.image, "/logo/logo_ba.png"),
+        social: member.social.map((social) => ({
+          ...social,
+          href: sanitizeUrl(social.href),
+        })),
+      }));
+    },
   },
   mounted() {
     AOS.init({

@@ -16,7 +16,7 @@
 
       <!-- Stats Grid -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-        <div v-for="(client, index) in clients" :key="client.name"
+        <div v-for="(client, index) in safeClients" :key="client.name"
              class="group relative" data-aos="flip-left" :data-aos-delay="index * 100">
           <div class="absolute inset-0 rounded-2xl bg-azul-100 opacity-0 transition-opacity duration-300 group-hover:opacity-100 -z-10"></div>
           <div class="p-6 rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -50,6 +50,7 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { sanitizeAssetUrl } from "@/utils/security";
 import Icon from "./Icon.vue";
 import Separator from "./Separator.vue";
 export default {
@@ -74,6 +75,14 @@ export default {
         { value: "15", label: "Ciudades atendidas", icon: "map-pin" }
       ]
     };
+  },
+  computed: {
+    safeClients() {
+      return this.clients.map((client) => ({
+        ...client,
+        logo: sanitizeAssetUrl(client.logo, "/logo/logo_ba.png"),
+      }));
+    },
   },
   mounted() {
     AOS.init({

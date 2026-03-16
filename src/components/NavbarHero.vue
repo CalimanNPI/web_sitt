@@ -26,7 +26,7 @@
       <!-- Desktop Navigation -->
       <nav class="hidden lg:block">
         <ul class="flex items-center space-x-4 xl:space-x-6">
-          <li v-for="item in navItems" :key="item.href">
+          <li v-for="item in safeNavItems" :key="item.href">
             <a
               :href="item.href"
               class="relative text-sm font-medium tracking-wide transition-all duration-300 xl:text-base hover:text-azul-500 group whitespace-nowrap"
@@ -119,7 +119,7 @@
               <!-- Navigation Links -->
               <nav class="flex-1 p-4 overflow-y-auto">
                 <ul class="space-y-1">
-                  <li v-for="item in navItems" :key="item.href">
+                  <li v-for="item in safeNavItems" :key="item.href">
                     <a
                       :href="item.href"
                       class="block py-3 px-4 text-base font-medium text-gray-700 transition-all rounded-lg hover:bg-azul-50 hover:text-azul-600"
@@ -152,6 +152,7 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { sanitizeAssetUrl, sanitizeUrl } from "@/utils/security";
 
 export default {
   name: "NavbarHero",
@@ -171,10 +172,17 @@ export default {
   computed: {
     logoSrc() {
       // Usar siempre el logo oscuro cuando hay scroll, claro cuando no
-      return this.scrollPosition > 50 
-        ? "/logo/logo_na.png" 
-        : "/logo/logo_ba.png";
-    }
+      return sanitizeAssetUrl(
+        this.scrollPosition > 50 ? "/logo/logo_na.png" : "/logo/logo_ba.png",
+        "/logo/logo_ba.png",
+      );
+    },
+    safeNavItems() {
+      return this.navItems.map((item) => ({
+        ...item,
+        href: sanitizeUrl(item.href),
+      }));
+    },
   },
   methods: {
     updateScroll() {

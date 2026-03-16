@@ -16,7 +16,7 @@
           </p>
           <div class="flex space-x-4">
             <a 
-              v-for="social in socialLinks" 
+              v-for="social in safeSocialLinks" 
               :key="social.name"
               :href="social.href" 
               class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-azul-600 hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
@@ -36,7 +36,7 @@
         <div class="lg:col-span-2">
           <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
           <ul class="space-y-3">
-            <li v-for="link in quickLinks" :key="link.text">
+            <li v-for="link in safeQuickLinks" :key="link.text">
               <a 
                 :href="link.href" 
                 class="inline-flex items-center text-gray-400 hover:text-azul-400 transition-all duration-300 text-sm hover:translate-x-1"
@@ -99,6 +99,7 @@
 </template>
 
 <script>
+import { sanitizeUrl } from "@/utils/security";
 import Icon from "./Icon.vue";
 import Separator from "./Separator.vue";
 
@@ -149,6 +150,20 @@ export default {
         "Rentas ejecutivas"
       ]
     };
+  },
+  computed: {
+    safeSocialLinks() {
+      return this.socialLinks.map((social) => ({
+        ...social,
+        href: sanitizeUrl(social.href),
+      }));
+    },
+    safeQuickLinks() {
+      return this.quickLinks.map((link) => ({
+        ...link,
+        href: sanitizeUrl(link.href),
+      }));
+    },
   }
 };
 </script>
