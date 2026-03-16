@@ -2,7 +2,7 @@
 
   <section class="relative h-screen overflow-hidden">
     <video
-      src="video.mp4"
+      src="video/video.mp4"
       autoplay
       loop
       muted
